@@ -1,4 +1,248 @@
 .md-width {
-  width: 80vw;
-  margin: auto;
+margin-left: 20vw;
+margin-right: 20vw;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  background-color: #272b33;
+  color: #8f96a3;
+}
+
+/* ScrollReveal Utility Class to
+ prevent flashing on initial load. */
+html .sr .load-hidden {
+  visibility: hidden;
+}
+
+.header-links {
+  color: #f1f2f4;
+}
+
+nav {
+  background-color: #1e2631;
+  overflow: hidden;
+  padding: 1em;
+}
+
+nav a {
+  color: #5ca5e1;
+}
+
+nav a:visited {
+  color: #5ca5e1;
+}
+
+nav .navWide {
+  display: none;
+  margin: 0 auto;
+}
+
+nav .navWide .wideDiv {
+  text-align: center;
+}
+
+nav .navWide .wideDiv a {
+  text-decoration: none;
+  display: inline-block;
+  /*Adjust padding to increase/decrease the space between links.*/
+  padding: 0 2em;
+}
+
+/*Navbar is set to default with the "hamburger" and links on the left
+side of the screen. To move to the right of the screen, simply
+change the three "float: Left;" references to read "float: right;".*/
+nav .navNarrow i {
+  float: left;
+  cursor: pointer;
+  color: white;
+}
+
+nav .navNarrow .narrowLinks a {
+  text-decoration: none;
+  display: block;
+  float: left;
+  clear: left;
+  padding: 0.5em 0;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  width: 35px;
+  height: 35px;
+}
+
+/*Adjust breakpoint as desired to select when the "hamburger" menu is
+replaced by just the links.*/
+@media (min-width: 480px) {
+  nav .navWide {
+    display: block;
+  }
+
+  nav .navNarrow {
+    display: none;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.col {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.technologies span {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+span.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(12deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(9deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.object {
+  -webkit-animation: action 0.75s infinite alternate;
+  animation: action 0.75s infinite alternate;
+  display: inline-block;
+}
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.technologies span {
+  font-size: 10px;
+}
+
+@media (min-width: 350px) {
+  .technologies span {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .technologies span {
+    font-size: 14px;
+  }
+
+  .technologies {
+    max-width: 768px;
+  }
+}
+
+.hero-buttons .project-button {
+  width: 235px;
+  background-color: #5ca5e1;
+  border-radius: 2.5px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.hero-max-width {
+  max-width: 500px;
+}
+
+.footer {
+  height: 40px;
+  color: white;
+  background-color: #1e2631;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-projects-max-width {
+  max-width: 900px;
+}
+
+.project-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.custom-btn {
+  white-space: nowrap;
+}
+
+.flex-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-body {
+  font-size: 15px;
+}
+
+.view-code-btn {
+  background-color: #5ca5e1;
+  border: 0;
+}
+
+.view-demo-btn {
+  background-color: #7c7c7c;
+  border: 0;
 }

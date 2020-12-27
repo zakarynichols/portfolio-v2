@@ -1,20 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Markdown from './Markdown/Markdown';
 import './App.css'
+import Home from './Pages/Home/Home';
+
+import ScrollReveal from 'scrollreveal'
 
 const App = () => {
-
-  const mdWidth = 'md-width'
-
-  const markdown = `
-~~~js
-const embedAnExpresion = (exp) => \`Wook at this \${exp}\`;
-~~~
-`
   return (
-    <Markdown markdown={markdown} mdClassName={mdWidth} />
-  );
+    <Home />
+  )
 };
-
 export default App;
 
