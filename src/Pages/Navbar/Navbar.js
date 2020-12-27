@@ -1,19 +1,21 @@
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
     return (
         <section className="topnav" id="myTopnav">
             <nav>
                 <div className="navWide">
                     <div className="wideDiv">
-                        <a href="#">HOME</a>
-                        <a href="./projects.html">PROJECTS</a>
+                        <Link to="/">HOME</Link>
+                        <Link to="/projects">PROJECTS</Link>
                         <a href="https://github.com/zaknicholsdev">GITHUB</a>
                     </div>
                 </div>
                 <div className="navNarrow">
                     <i className="fa fa-bars fa-2x"></i>
                     <div className="narrowLinks hidden">
-                        <a href="#">HOME</a>
-                        <a href="./projects.html">PROJECTS</a>
+                        <Link to="/">HOME</Link>
+                        <Link to="/projects">PROJECTS</Link>
                         <a href="https://github.com/zaknicholsdev">GITHUB</a>
                     </div>
                 </div>
