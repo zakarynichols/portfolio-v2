@@ -9,7 +9,7 @@ const Footer = () => {
                     width: '100%',
                     bottom: '0'
                 }}
-                className="mt-4 footer">
+                className="footer">
                 Made by Zak Nichols
             </footer>
         </Fragment>

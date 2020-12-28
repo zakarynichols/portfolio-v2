@@ -1,10 +1,8 @@
 import React, { Fragment } from 'react';
 import Markdown from '../../Markdown/Markdown';
 import './css/index.css'
-import Navbar from "../Navbar/Navbar";
 import Technologies from './components/Technologies';
 import Hero from './components/Hero';
-import Footer from '../Footer/Footer';
 
 const Home = () => {
 
