@@ -64,13 +64,14 @@ const setSleepCyclesPM = (period, sleepCyclesArray) => {
 > - Return the new array of sleep cycles. Again, using the pure \`map\` method to not mutate our data
 ~~~js
 const setSleepCyclesTwelve = (hour, sleepCyclesArray) => {
+    const copy = sleepCyclesArray.map(s => new Date(s.getTime()))
     if (hour === '12') {
-        const cycle = sleepCyclesArray.map(sleepCycleObject => {
+        return copy.map(sleepCycleObject => {
             const hours = sleepCycleObject.getHours() + 12
             sleepCycleObject.setHours(hours);
         });
-        return cycle;
     };
+    return copy;
 };
 ~~~
 ##### Step Four: Handle form validation.
