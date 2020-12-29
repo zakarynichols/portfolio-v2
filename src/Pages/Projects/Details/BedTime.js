@@ -5,6 +5,7 @@ const BedTime = ({ name }) => {
     const mb = "my-mb"
     const markdown = `
 # **${name}**
+### This tutorial should be finished here shortly! Thanks for the patience.
 ## *What you will learn*
 - First-class functions: [Ex: Assigning functions in variables](https://en.wikipedia.org/wiki/First-class_function)
 - Composability: [Writing modular and stateless functions](https://en.wikipedia.org/wiki/Composability#:~:text=Composability%20is%20a%20system%20design,to%20satisfy%20specific%20user%20requirements.)
@@ -17,7 +18,7 @@ const BedTime = ({ name }) => {
 ##### Step One: Get our sleep cycles  
 > - Create a first-class function called \`getSleepCycles(hour, minute)\` that we'll assign to a variable later.
 > - Our function \`getSleepCycles(hour, minute)\` takes two parameters, hour and minute.
-> - For each sleep parameters cycle, instantiate a new \`Date\` object and assign it to a variable.  
+> - For each sleep cycle, instantiate a new \`Date\` by calling the \`new Date()\` constructor and assign it to a variable.  
 > - We only need the hours and minutes so we can omit the first three parameters of the \`Date\`. 
 > - [Check out Mozilla's](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date#Syntax) \`Date()\` constructor docs to see the other parameters like year, month, etc. or know more about the \`Date()\` constructor.
 > - On each subsequent cycle variable subtract one hour and thirty minutes.
