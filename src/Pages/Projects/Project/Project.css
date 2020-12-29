@@ -3,3 +3,11 @@
     margin-left: 10rem;
     margin-right: 10rem;
 }
+
+blockquote {
+    background: #323742;
+    border-left: 10px solid #1e2631;
+    margin: 1.5em 10px;
+    padding: 1em 10px .1em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
