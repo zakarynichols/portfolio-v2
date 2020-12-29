@@ -10,7 +10,7 @@ const Project = () => {
     const { name } = useParams();;
 
     switch (name) {
-        case 'BedTime':
+        case 'bedtime-v2':
             return <BedTime name={name} />
         case 'HandyDiet':
             return <HandyDiet name={name} />

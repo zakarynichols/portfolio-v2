@@ -15,7 +15,7 @@ const Projects = () => {
             image: handyDiet,
         },
         {
-            name: 'BedTime',
+            name: 'bedtime-v2',
             image: bedTime,
         },
         {
