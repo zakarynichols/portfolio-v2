@@ -16,7 +16,7 @@ const Hero = () => {
        writing queries in SQL, and building API's in Node with RESTful architecture.</p>
             <div className="hero-buttons text-center">
                 <Link className="btn text-white m-2 py-2 header-links project-button" to="/projects">
-                <FontAwesomeIcon icon={faPencilRuler} /><span> PROJECTS</span>
+                <FontAwesomeIcon icon={faPencilRuler} /><span> TUTORIALS</span>
                 </Link>
                 <a className="btn text-white m-2 py-2 header-links project-button" href="https://github.com/zaknicholsdev">
                 <FontAwesomeIcon icon={faGithub} /><span> GITHUB</span>
