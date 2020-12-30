@@ -1,14 +1,10 @@
 import Markdown from '../../../Markdown/Markdown';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faMoon } from '@fortawesome/free-solid-svg-icons'
 
 const BedTime = ({ name }) => {
-    ;
     const width = "w"
     const mb = "my-mb"
     const markdown = `
-# ${name} 🌒
+# ${name} 🌒 [Demo](https://zaknicholsdev.github.io/bedtime-v2/)
 ### This tutorial should be finished here shortly! Thanks for the patience.
 ## *What you will learn*
 - First-class functions: [Ex: Assigning functions in variables](https://en.wikipedia.org/wiki/First-class_function)
@@ -20,15 +16,13 @@ const BedTime = ({ name }) => {
 - Rendering HTML and CSS dynamically.
 - Form's and validation.
 ## Before we dive in
->  The goal of this tutorial is to teach you how to write composable software. At the same time, manage statefulness.  
->  Almost every application we write will have end users triggering all sorts of events sending us different inputs to process and output back.  
+>  The goal of this tutorial is to teach you how to write composable software. At the same time, manage statefulness. Almost every application we write will have end users triggering all sorts of events sending us different inputs to process and output back.  
 
-> I/O [(input/output)](https://en.wikipedia.org/wiki/Input/output) is inherently impure. But, I/O can still be 'pure', if the passing of data  
-is explicit as both an argument and a result and I/O operations will fail when the conditions we write aren't explicitly met.
+> I/O [(input/output)](https://en.wikipedia.org/wiki/Input/output) is inherently impure. But, I/O can still be 'pure', if the passing of data is explicit as both an argument and a result and I/O operations will fail when the conditions we write aren't explicitly met.
 
 > In order for state to change things have to *mutate*. Mutations or state changes cause [*side-effects*](https://en.wikipedia.org/wiki/Side_effect_(computer_science)). What the functional paradigm will allow us to do is isolate our side-effects and easily note discrepencies in stateful code.
 
-> Here's an example in this codebase how JavaScript allows *first-class* functions. We can cleanly compose effectful code.
+> Here's an example in this codebase how JavaScript allows *first-class* functions. We can cleanly compose effectful code. Skim over it and then I'll show you how to build it from scratch.
 ~~~js
 const getWakeUpTimes = (event) => {
     event.preventDefault();

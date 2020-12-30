@@ -5,9 +5,8 @@ import HandyDiet from '../Details/HandyDiet';
 import Adopty from '../Details/Adopty';
 import Calculator from '../Details/Calculator';
 import MovieSearch from '../Details/MovieSearch';
-
 const Project = () => {
-    const { name } = useParams();;
+    const { name } = useParams();
 
     switch (name) {
         case 'bedtime-v2':

@@ -11,24 +11,29 @@ import {
 const Projects = () => {
     const projects = [
         {
-            name: 'HandyDiet',
-            image: handyDiet,
-        },
-        {
             name: 'bedtime-v2',
             image: bedTime,
+            url: 'https://zaknicholsdev.github.io/bedtime-v2/'
+        },
+        {
+            name: 'HandyDiet',
+            image: handyDiet,
+            url: ''
         },
         {
             name: 'Adopty',
-            image: adopty
+            image: adopty,
+            url: ''
         },
         {
             name: 'MovieSearch',
-            image: movieSearch
+            image: movieSearch,
+            url: ''
         },
         {
             name: 'Calculator',
             image: calc,
+            url: ''
         }
     ];
 
