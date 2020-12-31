@@ -2,7 +2,8 @@ import React, { Fragment, useEffect } from 'react'
 import './App.css'
 import {
   Switch,
-  Route
+  Route,
+  // useHistory
 } from 'react-router-dom';
 import Navbar from './Pages/Navbar/Navbar';
 import Footer from './Pages/Footer/Footer';
@@ -11,6 +12,14 @@ import Projects from './Pages/Projects/Projects';
 import Project from './Pages/Projects/Project/Project';
 
 const App = () => {
+
+  // const history = useHistory();
+  // useEffect(() => {
+  //   return history.listen(({ pathname }) => {
+  //     document.title = `Zak Nichols | ${pathname} | Portfolio`;
+  //   });
+  // }, [history.location]);
+
   return (
     <Fragment>
       <Navbar />
@@ -18,10 +27,10 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/projects">
+        <Route exact path="/projects">
           <Projects />
         </Route>
-        <Route path="/project/:name">
+        <Route exact path="/project/:name">
           <Project />
         </Route>
       </Switch>

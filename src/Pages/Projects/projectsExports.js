@@ -2,7 +2,8 @@ const { default: handyDiet } = require('../../assets/images/handydiet.png');
 const { default: bedTime } = require('../../assets/images/bedtime.png');
 const { default: calc } = require('../../assets/images/calc.png');
 const { default: movieSearch } = require('../../assets/images/moovy.png');
-const { default: adopty } = require('../../assets/images/adopty.png')
+const { default: adopty } = require('../../assets/images/adopty.png');
+const { default: handydietV2 } = require('../../assets/images/handydietv2.png');
 
 
 
@@ -11,5 +12,6 @@ export {
     bedTime,
     calc,
     movieSearch,
-    adopty
+    adopty,
+    handydietV2
 };

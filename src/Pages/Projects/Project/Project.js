@@ -5,6 +5,8 @@ import HandyDiet from '../Details/HandyDiet';
 import Adopty from '../Details/Adopty';
 import Calculator from '../Details/Calculator';
 import MovieSearch from '../Details/MovieSearch';
+import HandyDietV2 from '../Details/HandyDietV2';
+
 const Project = () => {
     const { name } = useParams();
 
@@ -19,6 +21,8 @@ const Project = () => {
             return <Calculator name={name} />
         case 'MovieSearch':
             return <MovieSearch name={name} />
+        case 'handydiet-v2':
+            return <HandyDietV2 name={name} />
         default:
             return console.error(`Sorry, we are out of ${name}.`);
     };

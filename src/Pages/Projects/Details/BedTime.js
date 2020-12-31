@@ -1,10 +1,15 @@
+import { useEffect } from 'react';
 import Markdown from '../../../Markdown/Markdown';
-
 const BedTime = ({ name }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     const width = "w"
     const mb = "my-mb"
     const markdown = `
-# ${name} 🌒 [Demo](https://zaknicholsdev.github.io/bedtime-v2/)
+# ${name} 🌒
+### [Live Demo](https://zaknicholsdev.github.io/bedtime-v2/)
+### [Code](https://github.com/zaknicholsdev/bedtime-v2)
 ### This tutorial should be finished here shortly! Thanks for the patience.
 ## *What you will learn*
 - First-class functions: [Ex: Assigning functions in variables](https://en.wikipedia.org/wiki/First-class_function)
@@ -44,7 +49,7 @@ const getWakeUpTimes = (event) => {
     render(errors, cycles);
 };
 ~~~
-##### Create a form for JavaScript to interact with
+##### Let's begin
 > - Create a form with \`id="calculate\`. Inside the form create \`select\` elements for hours, minute, and period (AM and PM)
 > - Give each select element give an \`id\` to identify the hour, minute, and period
 > - At the end of the form create a \`button\` element of \`type="submit\` for when we submit our form.
@@ -112,7 +117,7 @@ form.addEventListener('submit', (event) => {
     The rest of the function body...
 });
 ~~~
-##### Step: Get our sleep cycles  
+##### Get our sleep cycles  
 > - Create a first-class function called \`getSleepCycles(hour, minute)\` that we'll assign to a variable later.
 > - Our function \`getSleepCycles(hour, minute)\` takes two parameters, hour and minute.
 > - For each sleep cycle, instantiate a new \`Date\` by calling the \`new Date()\` constructor and assign it to a variable.  
@@ -130,7 +135,7 @@ const getSleepCycles = (hour, minute) => {
     return [firstCycle, secondCycle, thirdCycle, fourthCycle];
 };
 ~~~
-##### Step: Handle AM and PM
+##### Handle AM and PM
 > - Let's make a function \`setSleepCyclesPM(period, sleepCyclesArray)\` whose parameters are the period ('AM' or 'PM') and the array of sleep cycles we returned earlier.
 > - Copy our \`Date\` by mapping through the dates and calling the \`new Date()\` constructor. You can't just use spread syntax \`[...]\` because inside the array are instances of \`Date\` data-type not \`Object\`.  
 > - Inside our function body write an \`if\` statement to check the strict equality \`===\` of the period argument and the 'AM' or 'PM' string that comes from our form.
@@ -152,7 +157,7 @@ const setSleepCyclesPM = (period, sleepCyclesArray) => {
     return copy;
 };
 ~~~
-##### Step: Convert 24 hour to 12 hour
+##### Convert 24 hour to 12 hour
 > - Our app works nicely until you try and calculate a time with the hour 12.
 > - Our date objects are being instantiated as 24 hour time zones, but we need twelve.
 > - Let's write a function \`setSleepCyclesTwelve(hours, sleepCyclesArray)\` whose parameters are the hours input and array of sleep cycles.
@@ -172,7 +177,7 @@ const setSleepCyclesTwelve = (hour, sleepCyclesArray) => {
     return copy;
 };
 ~~~
-##### Step: Handle form validation.
+##### Handle form validation.
 > - We don't want the user submitting a form with an empty value. Let's fix that.
 > - Write a function \`isEmpty()\` whose parameters are the hour, minute, and period.
 > - Create an errors variable and set it to the DOM element with the \`id\` of errors using \`querySelector\`. You can use \`getElementById\` as well. I only used \`querySelector\` to play with it.
@@ -195,7 +200,7 @@ const isEmpty = (hour, minute, period) => {
     return false;
 };
 ~~~
-##### Step: Set our date object to en-US 12-hour time with AM/PM
+##### Set our date object to en-US 12-hour time with AM/PM
 > - Now let's create a function \`toTwelveHourTimeString()\` to set our array sleep cycles to en-US
 > - It will take one parameter, our array of sleep cycles.
 > - Now we're going to assign a variable \`twelveHourArr\` to a function \`map\`.
@@ -209,6 +214,7 @@ const toTwelveHourTimeString = (arr) => {
     });
 };
 ~~~
+##### To be continued...
 `
 
     return (

@@ -5,7 +5,8 @@ import {
     bedTime,
     movieSearch,
     calc,
-    adopty
+    adopty,
+    handydietV2
 } from './projectsExports';
 
 const Projects = () => {
@@ -13,27 +14,61 @@ const Projects = () => {
         {
             name: 'bedtime-v2',
             image: bedTime,
-            url: 'https://zaknicholsdev.github.io/bedtime-v2/'
-        },
-        {
-            name: 'HandyDiet',
-            image: handyDiet,
-            url: ''
+            tech: [
+                { class: 'devicon-javascript-plain colored mr-1' },
+                { class: 'devicon-html5-plain colored mr-1' },
+                { class: 'devicon-css3-plain colored' }
+            ]
         },
         {
             name: 'Adopty',
             image: adopty,
-            url: ''
+            tech: [
+                { class: 'devicon-vuejs-plain colored mr-1' },
+                { class: 'devicon-javascript-plain colored mr-1' },
+                { class: 'devicon-html5-plain colored mr-1' },
+                { class: 'devicon-css3-plain colored' }
+            ]
+        },
+        {
+            name: 'handydiet-v2',
+            image: handydietV2,
+            tech: [
+                { class: 'devicon-react-original colored mr-1' },
+                { class: 'devicon-javascript-plain colored mr-1' },
+                { class: 'devicon-html5-plain colored mr-1' },
+                { class: 'devicon-css3-plain colored' }
+            ]
+        },
+        {
+            name: 'HandyDiet',
+            image: handyDiet,
+            tech: [
+                { class: 'devicon-react-original colored mr-1' }, 
+                { class: 'devicon-javascript-plain colored mr-1' },
+                { class: 'devicon-html5-plain colored mr-1' },
+                { class: 'devicon-css3-plain colored' }
+            ]
         },
         {
             name: 'MovieSearch',
             image: movieSearch,
-            url: ''
+            tech: [
+                { class: 'devicon-react-original colored mr-1' },
+                { class: 'devicon-javascript-plain colored mr-1' },
+                { class: 'devicon-html5-plain colored mr-1' },
+                { class: 'devicon-css3-plain colored' }
+            ]
         },
         {
             name: 'Calculator',
             image: calc,
-            url: ''
+            tech: [
+                { class: 'devicon-react-original colored mr-1' },
+                { class: 'devicon-javascript-plain colored mr-1' },
+                { class: 'devicon-html5-plain colored mr-1' },
+                { class: 'devicon-css3-plain colored' }
+            ]
         }
     ];
 
@@ -46,13 +81,21 @@ const Projects = () => {
                         <div className="card-body text-center">
                             <h5 className="card-title">{p.name}</h5>
                             {/* <p className="card-text">{p.description}</p> */}
+                            <div>
+                                {p.tech.map(t => {
+                                    return (
+                                        <i style={{ fontSize: '1.5em' }} className={t.class} />
+                                    );
+                                })}
+                            </div>
+                            <br />
                             <Link to={`/project/${p.name}`} style={{ border: 'none', backgroundColor: '#1e2631' }} className="btn btn-primary">View</Link>
                         </div>
                     </div>
                 );
             })}
         </div>
-    )
-}
+    );
+};
 
 export default Projects
