@@ -4,14 +4,13 @@ import Markdown from '../../../Markdown/Markdown';
 const HandyDietV2 = ({ name }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+    }, []);
     const width = "w"
     const markdown = `
 # ${name} 🥙
 ### [Live Demo](https://zaknicholsdev.github.io/handydiet-v2/#/)
 ### [Code](https://github.com/zaknicholsdev/handydiet-v2)
-*Tutorial coming soon!*  
-This project is a rewrite of my original Handy Diet application migrating from class based components and lifecycle methods to functional components and hooks. This time with brand new features and user interface!  
+This project is a rewrite of my original Handy Diet application (still in progress..) migrating from class based components and lifecycle methods to functional components and hooks. This time with brand new features and user interface!  
 ## Spoonacular API 🥄
 
 The data comes from the third party API, Spoonacular. They're one of the largest nutritional API's and have plenty of different parameters to search for different meal plans, restaurant menu items, and recipes.

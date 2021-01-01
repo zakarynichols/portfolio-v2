@@ -3,9 +3,8 @@ import Markdown from '../../../Markdown/Markdown';
 const BedTime = ({ name }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+    }, []);
     const width = "w"
-    const mb = "my-mb"
     const markdown = `
 # ${name} 🌒
 ### [Live Demo](https://zaknicholsdev.github.io/bedtime-v2/)

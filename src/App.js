@@ -3,7 +3,7 @@ import './App.css'
 import {
   Switch,
   Route,
-  // useHistory
+  useHistory
 } from 'react-router-dom';
 import Navbar from './Pages/Navbar/Navbar';
 import Footer from './Pages/Footer/Footer';
@@ -13,12 +13,16 @@ import Project from './Pages/Projects/Project/Project';
 
 const App = () => {
 
-  // const history = useHistory();
-  // useEffect(() => {
-  //   return history.listen(({ pathname }) => {
-  //     document.title = `Zak Nichols | ${pathname} | Portfolio`;
-  //   });
-  // }, [history.location]);
+  useEffect(() => {
+    document.title = `Zak Nichols | Home | Portfolio`
+  }, [])
+
+  const history = useHistory();
+  useEffect(() => {
+    history.listen(({ pathname }) => {
+      document.title = `Zak Nichols | ${pathname} | Portfolio`;
+    });
+  }, [history.location.pathname]);
 
   return (
     <Fragment>

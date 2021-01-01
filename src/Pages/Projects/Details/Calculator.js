@@ -4,7 +4,7 @@ import Markdown from '../../../Markdown/Markdown';
 const Calculator = ({ name }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+    }, []);
     const width = "w"
     const markdown = `
 # ${name} 🖩

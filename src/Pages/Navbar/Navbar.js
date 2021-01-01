@@ -21,7 +21,7 @@ const Navbar = () => {
                 <div className="navWide">
                     <div className="wideDiv">
                         <Link to="/"><FontAwesomeIcon icon={faHome} /> HOME</Link>
-                        <Link to="/projects"><FontAwesomeIcon icon={faPencilRuler} /> TUTORIALS</Link>
+                        <Link to="/projects"><FontAwesomeIcon icon={faPencilRuler} /> PROJECTS</Link>
                         <a href="https://github.com/zaknicholsdev"><FontAwesomeIcon icon={faGithub} /> GITHUB</a>
                     </div>
                 </div>
@@ -29,7 +29,7 @@ const Navbar = () => {
                     <i onClick={handleToggle} className="fa fa-bars fa-2x"></i>
                     <div ref={narrowLinks} className="narrowLinks hidden">
                         <Link to="/" onClick={handleClose}><FontAwesomeIcon icon={faHome} /> HOME</Link>
-                        <Link to="/projects" onClick={handleClose}><FontAwesomeIcon icon={faPencilRuler} /> TUTORIALS</Link>
+                        <Link to="/projects" onClick={handleClose}><FontAwesomeIcon icon={faPencilRuler} /> PROJECTS</Link>
                         <a href="https://github.com/zaknicholsdev" onClick={handleClose}><FontAwesomeIcon icon={faGithub} /> GITHUB</a>
                     </div>
                 </div>
