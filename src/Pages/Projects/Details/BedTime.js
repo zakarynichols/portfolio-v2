@@ -253,8 +253,9 @@ const subtractTwelveHours = (sleepCyclesArr) => {
 We can simply map over each object return the objects hours with \`setHours()\` passing our objects hours with \`getHours()\`.  
 
 #### Adjust for AM to PM switch when hour is 12
-Well... We have another bug to squash. That's the life of a programmer.
-When you submit the hour with a value of 12 it's not accounting for the the switch of AM to PM. 
+Well... We have another bug to squash, but that's the life of a programmer.
+When you submit the form with the hour being a value of 12 it's not accounting for the the switch from AM to PM. 
+We need to add 12 hours to adjust for the change from AM to PM.
 Add an \`if\` statement to check if the value was 12. 
 
 ~~~js
@@ -295,8 +296,8 @@ const addTwelveHours = (sleepCyclesArr) => {
 #### Handle form validation.
 We don't want the user submitting a form with an empty value. 
 Assign a variable \`isEmpty()\` to a function with parameters hour, minute, and period. 
- an errors variable and set it to the element with the \`id\` of errors using \`querySelector\`. You can use \`getElementById\` as well. I only used \`querySelector\` to play with it.
-Write an \`if\` statment to check the strict equality \`===\` of each argument value. 
+Declare an errors variable and set it to the element with the \`id\` of errors using \`querySelector\`. You can use \`getElementById\` as well. I only used \`querySelector\` to play with it.
+Write an \`if\` statement to check the strict equality \`===\` of each argument value. 
 In an application that handles sensitive data you'd typically have more rigid form validation.  
 
 ~~~js
@@ -369,7 +370,7 @@ const toTwelveHourTime = (sleepCyclesArr) => {
 };
 ~~~
 
-Now we can use it to wrap our \`copy\` of sleep cycles array in our \`getWakeUpTimes\` function.
+Now we can use it to wrap our \`copy\` of sleep cycles and return a more human readable time.
 
 ~~~js
 const getWakeUpTimes = (event) => {
@@ -393,9 +394,7 @@ const getWakeUpTimes = (event) => {
         addTwelveHours(copy);
     };
 
-    // render() does not exist, yet.
-    // We'll create it shortly.
-    render(isErrors, toTwelveHourTime(copy));
+    toTwelveHourTime(copy);
 };
 ~~~
 
