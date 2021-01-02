@@ -183,7 +183,13 @@ const getSleepCycles = (hour, minute) => {
 };
 ~~~
 
-Now let's place this function after our \`hour\`, \`minute\`, and \`period\` variables. Try and submit the form now. 
+Now let's place this function after our \`hour\`, \`minute\`, and \`period\` variables. 
+Make sure you create a copy of the array and not mutate the original. 
+A common pattern in JavaScript, in particular React, is to see is \`[...sleepCycles]\` or \`{ ...sleepCycle }\`.  
+
+This is a way to create a copy of an array or object with \`...\` spread syntax. 
+In our case we have an instance of \`Date\`. From my testing, setting a variable to \`[...sleepCycles]\` and mutating it will still mutate the original array. 
+We have to map over our array and for each callback return a \`new Date()\`. This gives us a new copied array populated with the values we need that doesn't mutate.
 
 ~~~js
 const getWakeUpTimes = (event) => {
@@ -194,7 +200,10 @@ const getWakeUpTimes = (event) => {
     const { hour, minute, period } = elems;
 
     const sleepCycles = getSleepCycles(hour, minute);
-    console.log(sleepCycles);
+
+    const copy = sleepCycles.map(sleepCycle => new Date(sleepCycle.getTime()));
+
+    console.log(copy);
 };
 ~~~
 
