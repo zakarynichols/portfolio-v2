@@ -14,15 +14,15 @@ import Project from './Pages/Projects/Project/Project';
 const App = () => {
 
   useEffect(() => {
-    document.title = `Zak Nichols | Home | Portfolio`
-  }, [])
+    document.title = `Zak Nichols | Portfolio`
+  }, []);
 
-  const history = useHistory();
-  useEffect(() => {
-    history.listen(({ pathname }) => {
-      document.title = `Zak Nichols | ${pathname} | Portfolio`;
-    });
-  }, [history.location.pathname]);
+  // const history = useHistory();
+  // useEffect(() => {
+  //   history.listen(({ pathname }) => {
+  //     document.title = `Zak Nichols | ${pathname} | Portfolio`;
+  //   });
+  // }, [history.location.pathname]);
 
   return (
     <Fragment>
