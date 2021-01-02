@@ -1,16 +1,15 @@
 import { useEffect } from 'react';
 import Markdown from '../../../Markdown/Markdown';
 const BedTime = ({ name }) => {
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, []);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const width = "w"
     const markdown = `
-# ${name} 🌒
+# ${name.charAt(0).toUpperCase() + name.slice(1)} 🌒
 ### [Live Demo](https://zaknicholsdev.github.io/bedtime-v2/)
 ### [Code](https://github.com/zaknicholsdev/bedtime-v2)
-### This tutorial should be finished here shortly! Thanks for the patience.
-## *What you will learn*
+## What you will learn
 - First-class functions: [Ex: Assigning functions in variables](https://en.wikipedia.org/wiki/First-class_function)
 - Composability: [Writing modular and stateless functions](https://en.wikipedia.org/wiki/Composability#:~:text=Composability%20is%20a%20system%20design,to%20satisfy%20specific%20user%20requirements.)
 - Manipulating the DOM: [Check out MDN's event reference and try others!](https://developer.mozilla.org/en-US/docs/Web/Events)
@@ -19,7 +18,7 @@ const BedTime = ({ name }) => {
 - Common patterns that bridge the gap between plain JavaScript and React.
 - Rendering HTML and CSS dynamically.
 - Form's and validation.
-## Before we dive in
+### Before we dive in
 The goal of this tutorial is to get you familiar with writing composable software. At the same time, manage statefulness. Almost every application we write will have end users triggering all sorts of events sending us different inputs to process and output back.  
 
 I/O [(input/output)](https://en.wikipedia.org/wiki/Input/output) is inherently impure. But, I/O can still be *pure*, if the passing of data is explicit as both an argument and a result and the I/O operations fail when the conditions we write aren't explicitly met.
@@ -32,21 +31,25 @@ Here's an example of what I mean when I say composability and first-class functi
 const getWakeUpTimes = (event) => {
     event.preventDefault();
     
-    const elems = getDOMelements();
+    const elems = getElements();
 
-    const { hour, minute, period } = elems
+    const { hour, minute, period } = elems;
 
     const errors = isEmpty(hour, minute, period);
 
     const sleepCycles = getSleepCycles(hour, minute);
 
-    const sleepCyclesPM = subtractTwelveHoursIfPM(period, sleepCycles);
+    const copy = sleepCycles.map(sleepCycle => new Date(sleepCycle.getTime()));
 
-    const twelve = addTwelveHoursIfHourIsTwelve(hour, sleepCyclesPM);
+    if (period === 'PM') {
+        subtractTwelveHours(period, copy);
+    };
 
-    const cycles = toTwelveHourTimeString(twelve);
+    if (hours === '12') {
+        addTwelveHours(hour, copy);
+    };
 
-    render(errors, cycles);
+    render(errors, toTwelveHourTimeString(copy));
 };
 ~~~
 
@@ -60,41 +63,51 @@ Give each select element give an \`id\` to identify the hour, minute, and period
 At the end of the form create a \`button\` element of \`type="submit\` for when we submit our form.
 Now let's add some JavaScript to make it dynamic.
 ~~~html
-<form id="calculate">
-    <label for="hour">Hour:</label>
-    <select id="hour">
-        <option value="">Hour...</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-    </select>
-
-    <label for="minute">Minute:</label>
-    <select id="minute">
-        <option value="">Minute...</option>
-        <option value="00">00</option>
-        <option value="15">15</option>
-        <option value="30">30</option>
-        <option value="45">45</option>
-    </select>
-
-    <label for="period">Period:</label>
-    <select id="period">
-        <option value="">AM or PM...</option>
-        <option value="AM">AM</option>
-        <option value="PM">PM</option>
-    </select>
-    <button type="submit">Calculate</button>
-</form>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Cycle Calculator</title>
+</head>
+<body>
+    <h1>Sleep Cycle Calculator</h1>
+    <form id="calculate">
+        <label for="hour">Hour:</label>
+        <select id="hour">
+            <option value="">Hour...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+    
+        <label for="minute">Minute:</label>
+        <select id="minute">
+            <option value="">Minute...</option>
+            <option value="00">00</option>
+            <option value="15">15</option>
+            <option value="30">30</option>
+            <option value="45">45</option>
+        </select>
+    
+        <label for="period">Period:</label>
+        <select id="period">
+            <option value="">AM or PM...</option>
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+        </select>
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+</html>
 ~~~
 
 #### Write a callback function to fire on submit event
@@ -117,12 +130,12 @@ form.addEventListener('submit', getWakeUpTimes);
 
 It wont do anything, yet. Let's create a function to get our values.
 
-#### Write a function to grab DOM elements and return their values
+#### Write a function to grab the select DOM nodes and return their values
 Assign four variables \`results\`, \`selectHours\`, \`selectMinutes\`, \`selectPeriod\` with \`document.querySelector()\` to reference the DOM nodes we'll interact with.
 Return an object containing the \`hour\`, \`minute\`, and \`period\` variables.  
 
 ~~~js
-const getDOMelements = () => {
+const getElements = () => {
     const selectHours = document.querySelector('select#hour');
     const selectMinutes = document.querySelector('select#minute');
     const selectPeriod = document.querySelector('select#period');
@@ -143,12 +156,12 @@ When we log the object out to the console we can omit the object's key name if i
 const getWakeUpTimes = (event) => {
     event.preventDefault();
 
-    const elems = getDOMelements();
+    const elems = getElements();
 
     const { hour, minute, period } = elems;
 
     console.log({ hour, minute, period });
-}
+};
 ~~~
 
 Now our form will log out our values! Let's go furthur.
@@ -176,13 +189,13 @@ Now let's place this function after our \`hour\`, \`minute\`, and \`period\` var
 const getWakeUpTimes = (event) => {
     event.preventDefault();
 
-    const elems = getDOMelements();
+    const elems = getElements();
 
-    const { hour, minute, period } = elems
+    const { hour, minute, period } = elems;
 
     const sleepCycles = getSleepCycles(hour, minute);
-    console.log(sleepCycles)
-}
+    console.log(sleepCycles);
+};
 ~~~
 
 In the console you'll get back an array of \`Date\` instances with the sleep cycles!
@@ -199,17 +212,19 @@ Add an \`if\` statement inside \`getTimesToWakeUp\` to check if our \`period\` v
 const getWakeUpTimes = (event) => {
     event.preventDefault();
 
-    const elems = getDOMelements();
+    const elems = getElements();
 
     const { hour, minute, period } = elems;
 
     const sleepCycles = getSleepCycles(hour, minute);
 
+    const copy = sleepCycles.map(sleepCycle => new Date(sleepCycle.getTime()));
+
     if (period === 'PM') {
-        subtractTwelveHours(sleepCycles);
+        subtractTwelveHours(copy);
     };
 
-    console.log(sleepCycles);
+    console.log(copy);
 };
 ~~~
 
@@ -237,21 +252,23 @@ Add an \`if\` statement to check if the value was 12.
 const getWakeUpTimes = (event) => {
     event.preventDefault();
 
-    const elems = getDOMelements();
+    const elems = getElements();
 
     const { hour, minute, period } = elems;
 
     const sleepCycles = getSleepCycles(hour, minute);
 
+    const copy = sleepCycles.map(sleepCycle => new Date(sleepCycle.getTime()));
+
     if (period === 'PM') {
-        subtractTwelveHours(sleepCycles);
+        subtractTwelveHours(copy);
     };
 
     if (hours === '12') {
-        addTwelveHours(sleepCycles);
+        addTwelveHours(copy);
     };
 
-    console.log(sleepCycles);
+    console.log(copy);
 };
 ~~~
 
@@ -273,12 +290,6 @@ Assign a variable \`isEmpty()\` to a function with parameters hour, minute, and 
 Write an \`if\` statment to check the strict equality \`===\` of each argument value. 
 In an application that handles sensitive data you'd typically have more rigid form validation.  
 
-If the text fields are empty the \`textContent\` property of our elements errors variable is set to a string: 'You must enter the fields.'
-On the errors element call \`setAttribute\`. The first argument is the attribute name. In our case, a class. The second argument the value we want to set it to. A css class \`.
-Return true as our function expression's name is \`isEmpty\` because our form is in fact, empty.
-If the parameters pass our conditional then we'll just set the errors DOM element \`textContent\` property to an empty string.
-Return false because, well, \`isEmpty\` is false.
-Since \`isEmpty\` is a first-class function and returns a \`Boolean\` we can use it later to determine whether or not to render errors or the sleep cycles.
 ~~~js
 const isEmpty = (hour, minute, period) => {
     const errors = document.querySelector('div#errors');
@@ -291,26 +302,155 @@ const isEmpty = (hour, minute, period) => {
     return false;
 };
 ~~~
-#### Set our date object to en-US 12-hour time with AM/PM
-Now let's create a function \`toTwelveHourTimeString()\` to set our array sleep cycles to en-US
-It will take one parameter, our array of sleep cycles.
-Now we're going to assign a variable \`twelveHourArr\` to a function \`map\`.
-On each iteration we'll call the method \`toLocaleTimeString\` on each object and before pass in a string as the first paramater to specify our [locale](https://en.wikipedia.org/wiki/Locale_(computer_software)). The second parameter will be an object with properties describing how we'd like our \`Date\` object.
-By now you already know this, but make sure to explicitly \`return\` each object in multi-line arrow functions. In contrast to a single line arrow function in which you can omit the return
-The assigned variable will hold the new returned array of sleep cycles
+
+If the text fields are empty the \`textContent\` property of our elements errors variable is set to a string: 'You must enter the fields.'
+On the errors element call \`setAttribute\`. The first argument is the attribute name. In our case, a class. The second argument the value we want to set it to. A css class.
+Now call \`return true\` because our form is empty.
+If the parameters pass our conditional then we'll just set the errors \`textContent\` property to an empty string.
+Return false because our form is not empty.
+Here's the updated \`getWakeUpTimes\` function.
+
+You can now add \`isErrors\` to our \`getWakeUpTimes\` function.
+
 ~~~js
-const toTwelveHourTimeString = (arr) => {
-    const options = {
+const getWakeUpTimes = (event) => {
+    event.preventDefault();
+
+    const elems = getElements();
+
+    const { hour, minute, period } = elems;
+
+    const isErrors = isEmpty(hour, minute, period);
+
+    const sleepCycles = getSleepCycles(hour, minute);
+
+    const copy = sleepCycles.map(sleepCycle => new Date(sleepCycle.getTime()));
+
+    if (period === 'PM') {
+        subtractTwelveHours(copy);
+    };
+
+    if (hour === '12') {
+        addTwelveHours(copy);
+    };
+};
+~~~
+
+Let's move on and format the date before we render.
+
+#### Set our date object to en-US 12-hour time with AM/PM
+
+Now assign a variable to a function \`toTwelveHourTime()\` to set our array sleep cycles to en-US. 
+It will take one parameter, our array of sleep cycles. 
+Declare a variable \`options\` as an object with three properties \`hour\`, \`minute\`, and \`hour12\`. 
+We'll pass this object to the method\`toLocaleTimeString\`.
+
+Call the map method on our sleep cycles array and return. In the map callback return each each object calling \`toLocaleTimeString\` and pass in a string \`'en-US'\` as the first parameter to specify our [locale](https://en.wikipedia.org/wiki/Locale_(computer_software)). 
+The second parameter will be an our \`options\` object describing how to output the time. [There are several options to configure.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString).
+~~~js
+const toTwelveHourTime = (sleepCyclesArr) => {
+    const options = { 
         hour: 'numeric',
         minute: 'numeric',
         hour12: 'true'
     }
-    return arr.map(obj => {
-        return obj.toLocaleTimeString('en-US', options);
+    return sleepCyclesArr.map(sleepCyclesObj => {
+        return sleepCyclesObj.toLocaleTimeString('en-US', options);
     });
 };
 ~~~
-#### To be continued...
+
+Now we can use it to wrap our \`copy\` of sleep cycles array in our \`getWakeUpTimes\` function.
+
+~~~js
+const getWakeUpTimes = (event) => {
+    event.preventDefault();
+
+    const elems = getElements();
+
+    const { hour, minute, period } = elems;
+
+    const isErrors = isEmpty(hour, minute, period);
+
+    const sleepCycles = getSleepCycles(hour, minute);
+
+    const copy = sleepCycles.map(sleepCycle => new Date(sleepCycle.getTime()));
+
+    if (period === 'PM') {
+        subtractTwelveHours(copy);
+    };
+
+    if (hour === '12') {
+        addTwelveHours(copy);
+    };
+
+    // render() does not exist, yet.
+    // We'll create it shortly.
+    render(isErrors, toTwelveHourTime(copy));
+};
+~~~
+
+Lastly, it's time to create the \`render\` function.
+
+#### Rendering the sleep cycles or errors
+Assign a variable \`results\` to the div DOM node with the id of results.
+Declare a variable \`render\` and assign it to a function. 
+This function will return a ternary.
+Either A string of HTML or an empty string depending on the value of \`isErrors\`.
+Our sleep cycles are in an array so we can grab their index and embed them in the HTML. 
+
+Hopefully now you can see why React is so popular. In plain JavaScript manipulating the DOM 
+is tedious. Lots of \`createElement\`, \`appendChild\`, \`textContent\`, \`innerHTML\`, \`insertAdjacentHTML\`, \`setAttribute\`, etc. 
+Instead with React we could return JSX. In my opinion our UI's are so tightly coupled to JavaScript it makes sense. I'm returning 
+HTML as a string here. Why not return it with syntax highlighting and extended features? (If you can't tell I love React.)
+
+~~~js
+const render = (isErrors, sleepCycles) => {
+    const results = document.querySelector('div#results');
+
+    return !isErrors ? results.innerHTML = 
+    \`
+        You should go to bed at:
+        <div>
+        \${sleepCycles[0]}<span>, or</span>
+        \${sleepCycles[1]}<span>, or</span>
+        \${sleepCycles[2]}<span>, or</span>
+        \${sleepCycles[3]}
+        </div>
+    \` : results.textContent = '';
+};
+~~~
+
+Finally, let's add our \`render\` function to \`getWakeUpTimes\`.
+
+~~~js
+const getWakeUpTimes = (event) => {
+    event.preventDefault();
+
+    const elems = getElements();
+
+    const { hour, minute, period } = elems;
+
+    const isErrors = isEmpty(hour, minute, period);
+
+    const sleepCycles = getSleepCycles(hour, minute);
+
+    if (period === 'PM') {
+        subtractTwelveHours(sleepCycles);
+    };
+
+    if (hour === '12') {
+        addTwelveHours(sleepCycles);
+    };
+
+    render(isErrors, toTwelveHourTime(sleepCycles));
+};
+~~~
+
+# Congratulations!
+Thank you for taking the time to read my tutorial. I hope you got some value out of it. We touched on a lot of points that will hopefully give some insight into becoming a better developer. 
+This project is very practical. The same concepts and patterns you used here are very similar to what I do in my career. 
+If you'd like me to do a tutorial on the entire application with the animated background using canvas API send me an email. - <portfolio@zaknichols.com>
 `
 
     return (
