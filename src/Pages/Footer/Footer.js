@@ -10,7 +10,7 @@ const Footer = () => {
                     bottom: '0'
                 }}
                 className="footer">
-                Made by Zak Nichols
+                Made by Zak Nichols 👨‍💻
             </footer>
         </Fragment>
     );

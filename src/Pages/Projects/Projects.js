@@ -12,7 +12,7 @@ import {
 const Projects = () => {
     const projects = [
         {
-            name: 'bedtime-v2',
+            name: 'BedTime-v2',
             image: bedTime,
             tech: [
                 { class: 'devicon-javascript-plain colored mr-1' },
@@ -31,7 +31,7 @@ const Projects = () => {
             ]
         },
         {
-            name: 'handydiet-v2',
+            name: 'HandyDiet-v2',
             image: handydietV2,
             tech: [
                 { class: 'devicon-react-original colored mr-1' },
@@ -41,7 +41,7 @@ const Projects = () => {
             ]
         },
         {
-            name: 'HandyDiet',
+            name: 'EasyDiet',
             image: handyDiet,
             tech: [
                 { class: 'devicon-react-original colored mr-1' },

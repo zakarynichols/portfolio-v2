@@ -11,9 +11,9 @@ const Project = () => {
     const { name } = useParams();
 
     switch (name) {
-        case 'bedtime-v2':
+        case 'BedTime-v2':
             return <BedTime name={name} />
-        case 'HandyDiet':
+        case 'EasyDiet':
             return <HandyDiet name={name} />
         case 'Adopty':
             return <Adopty name={name} />
@@ -21,10 +21,10 @@ const Project = () => {
             return <Calculator name={name} />
         case 'MovieSearch':
             return <MovieSearch name={name} />
-        case 'handydiet-v2':
+        case 'HandyDiet-v2':
             return <HandyDietV2 name={name} />
         default:
-            return console.error(`Sorry, we are out of ${name}.`);
+            return console.error(`Sorry, there's no project named: ${name}.`);
     };
 };
 

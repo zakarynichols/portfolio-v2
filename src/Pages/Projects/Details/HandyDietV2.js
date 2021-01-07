@@ -10,7 +10,7 @@ const HandyDietV2 = ({ name }) => {
 # ${name} 🥙
 ### [Live Demo](https://zaknicholsdev.github.io/handydiet-v2/#/)
 ### [Code](https://github.com/zaknicholsdev/handydiet-v2)
-This project is a rewrite of my original Handy Diet application (still in progress..) migrating from class based components and lifecycle methods to functional components and hooks. This time with brand new features and user interface!  
+This project is a rewrite of my original EasyDiet application (still in progress..) migrating from class based components and lifecycle methods to functional components and hooks. This time with brand new features and user interface!  
 ## Spoonacular API 🥄
 
 The data comes from the third party API, Spoonacular. They're one of the largest nutritional API's and have plenty of different parameters to search for different meal plans, restaurant menu items, and recipes.

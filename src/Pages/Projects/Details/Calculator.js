@@ -7,10 +7,10 @@ const Calculator = ({ name }) => {
     }, []);
     const width = "w"
     const markdown = `
-# ${name} 🖩
+# ${name} ➗
 ### [Live Demo](https://zaknicholsdev.github.io/react-calculator/#/)
 ### [Code](https://github.com/zaknicholsdev/react-calculator)
-> A calculator I built with React using functional components and hooks. There are several functions to handle the button events. Including handling operators, digits, screen-scaling, exponential notation, and more.
+A calculator I built with React using functional components and hooks. There are several functions to handle the button events. Including handling operators, digits, screen-scaling, exponential notation, and more.
 `
     return (
         <div>

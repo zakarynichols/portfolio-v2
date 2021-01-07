@@ -8,9 +8,9 @@ const MovieSearch = ({ name }) => {
     const width = "w"
     const markdown = `
 # ${name} 🎥
-### [Live Demo](https://zaknicholsdev.github.io/Moovy/#/)
+### [Live Demo](https://zaknicholsdev.github.io/movie-search/#/)
 ### [Code](https://github.com/zaknicholsdev/movie-search/tree/master)
-> Search for your favorite movie from the Open Movie Database (OMDB) API. You can view ratings, actors, posters, and plots of various different movies. Built with React to introduce myself to the new hooks API coming from classes.
+Search for your favorite movie from the Open Movie Database (OMDB) API. You can view ratings, actors, posters, and plots of various different movies. Built with React to introduce myself to the new hooks API coming from classes.
 `
 
     return (
