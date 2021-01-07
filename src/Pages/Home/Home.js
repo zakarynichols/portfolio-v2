@@ -8,8 +8,9 @@ const Home = () => {
 
   const mdWidth = 'md-width'
   const markdown = `
-~~~js
+~~~javascript
 const favParadigm = (paradigm) => \`I love \${paradigm} programming!\`;
+const myFav = favParadigm('functional');
 ~~~
 `
   return (

@@ -3,14 +3,13 @@ import ScrollReveal from 'scrollreveal';
 import {
   javascript,
   ionic,
-  vue,
+  typescript,
   react,
   css,
   node,
   postgres,
   mysql,
   mongo,
-  ubuntu,
   php,
   figma,
   vscode,
@@ -50,12 +49,12 @@ const Technologies = () => {
           <span>JavaScript</span>
         </div>
         <div className="reveal load-hidden">
-          <img className="img-responsive" src={react} alt="" />
-          <span>React</span>
+          <img className="img-responsive" src={typescript} alt="" />
+          <span>Typescript</span>
         </div>
         <div className="reveal load-hidden">
-          <img className="img-responsive" src={vue} alt="" />
-          <span>Vue</span>
+          <img className="img-responsive" src={react} alt="" />
+          <span>React</span>
         </div>
         <div className="reveal load-hidden">
           <img className="img-responsive" src={ionic} alt="" />
