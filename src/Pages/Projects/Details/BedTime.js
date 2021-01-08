@@ -28,7 +28,7 @@ In order for state to change things have to mutate. Mutations or state changes c
 
 Here's an example of what I mean when I say composability and first-class functions. Notice how composable or *expressive* the code is inside the function body of \`getWakeUpTimes\`.  
 
-~~~js
+~~~typescript
 const getWakeUpTimes = (event) => {
     event.preventDefault();
     
@@ -115,7 +115,7 @@ Now let's add some JavaScript to make it dynamic.
 Declare a variable \`getWakeUpTimes(e)\` and assign it to a function. Pass an \`event\` parameter 
 and call \`event.preventDefault()\` to disable the default submission behavior.
 
-~~~js
+~~~javascript
 const getWakeUpTimes = (event) => {
     event.preventDefault();
 };
@@ -124,7 +124,7 @@ const getWakeUpTimes = (event) => {
 Next declare a variable \`form\` and assign it to our form. Then call \`addEventListener\` 
 and on submit fire our callback function \`getWakeUpTimes\`.
 
-~~~js
+~~~javascript
 const form = document.querySelector('form#calculate');
 form.addEventListener('submit', getWakeUpTimes);
 ~~~~
@@ -135,7 +135,7 @@ It wont do anything, yet. Let's create a function to get our values.
 Assign four variables \`results\`, \`selectHours\`, \`selectMinutes\`, \`selectPeriod\` with \`document.querySelector()\` to reference the DOM nodes we'll interact with.
 Return an object containing the \`hour\`, \`minute\`, and \`period\` variables.  
 
-~~~js
+~~~javascript
 const getElements = () => {
     const selectHours = document.querySelector('select#hour');
     const selectMinutes = document.querySelector('select#minute');
@@ -153,7 +153,7 @@ Remember our \`getWakeUpTimes\` function we created? Let's declare a variable \`
 Since our function returns an object we can destructure our values \`{ hours, minutes, period }\` and use them as their variable names. 
 When we log the object out to the console we can omit the object's key name if it's the same name as the property.
 
-~~~js
+~~~javascript
 const getWakeUpTimes = (event) => {
     event.preventDefault();
 
@@ -173,7 +173,7 @@ So, let's think. What do we need to do when they submit the form? Whether it's p
 When the user submit's their time from the form, instantiate a \`Date\` with \`new Date()\` and set the time back 9 hours, 7 hours and 30 minutes, 6 hours, 4 hours and 30 minutes to account for the sleep cycles. Declare a variable \`getSleepCycles(hour, minute)\`. Our function takes two parameters, hour and minute.
 
 Return an array so we can use \`Array\` methods later.
-~~~js
+~~~javascript
 const getSleepCycles = (hour, minute) => {
     const firstCycle = new Date(null, null, null, hour - 9, minute);
     const secondCycle = new Date(null, null, null, hour - 7, minute - 30);
@@ -192,7 +192,7 @@ This is a way to create a copy of an array or object with \`...\` spread syntax.
 In our case we have an instance of \`Date\`. From my testing, setting a variable to \`[...sleepCycles]\` and mutating it will still mutate the original array. 
 We have to map over our array and for each callback return a \`new Date()\`. This gives us a new copied array populated with the values we need that doesn't mutate.
 
-~~~js
+~~~javascript
 const getWakeUpTimes = (event) => {
     event.preventDefault();
 
@@ -218,7 +218,7 @@ When we set the period to PM we're not accounting for our \`Date\` instance bein
 At the moment our form only submits 00:00 to 12:00 (12:00 AM to 12:00 PM). 
 Add an \`if\` statement inside \`getTimesToWakeUp\` to check if our \`period\` variable is AM or PM. 
 
-~~~js
+~~~javascript
 const getWakeUpTimes = (event) => {
     event.preventDefault();
 
@@ -243,7 +243,7 @@ Now we can submit from 12:00 to 24:00 (12:00 PM to 12:00 AM)!
 
 Let's assign a variable to a function \`subtractTwelveHours\` to handle the PM logic. 
 
-~~~js
+~~~javascript
 const subtractTwelveHours = (sleepCyclesArr) => {
     return sleepCyclesArr.map(sleepCycleObject => {
         return sleepCycleObject.setHours(sleepCycleObject.getHours() - 12);
@@ -259,7 +259,7 @@ When you submit the form with the hour being a value of 12 it's not accounting f
 We need to add 12 hours to adjust for the change from AM to PM.
 Add an \`if\` statement to check if the value was 12. 
 
-~~~js
+~~~javascript
 const getWakeUpTimes = (event) => {
     event.preventDefault();
 
@@ -286,7 +286,7 @@ const getWakeUpTimes = (event) => {
 Now to create the function to handle the logic. Assign another variable \`addTwelveHours\` to a function. 
 Again, use the \`map\` method to set the hours \`setHours()\` of our object by passing in the objects hours with \`getHours()\`. This time, adding 12 hours.
 
-~~~js
+~~~javascript
 const addTwelveHours = (sleepCyclesArr) => {
     return sleepCyclesArr.map(sleepCycleObject => {
         return sleepCycleObject.setHours(sleepCycleObject.getHours() + 12);
@@ -301,7 +301,7 @@ Declare an errors variable and set it to the element with the \`id\` of errors u
 Write an \`if\` statement to check the strict equality \`===\` of each argument value. 
 In an application that handles sensitive data you'd typically have more rigid form validation.  
 
-~~~js
+~~~javascript
 const isEmpty = (hour, minute, period) => {
     const errors = document.querySelector('div#errors');
     if (hour === '' || minute === '' || period === '') {
@@ -323,7 +323,7 @@ Here's the updated \`getWakeUpTimes\` function.
 
 You can now add \`isErrors\` to our \`getWakeUpTimes\` function.
 
-~~~js
+~~~javascript
 const getWakeUpTimes = (event) => {
     event.preventDefault();
 
@@ -358,7 +358,7 @@ We'll pass this object to the method\`toLocaleTimeString\`.
 
 Call the map method on our sleep cycles array and return. In the map callback return each each object calling \`toLocaleTimeString\` and pass in a string \`'en-US'\` as the first parameter to specify our [locale](https://en.wikipedia.org/wiki/Locale_(computer_software)). 
 The second parameter will be an our \`options\` object describing how to output the time. [There are several options to configure.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString).
-~~~js
+~~~javascript
 const toTwelveHourTime = (sleepCyclesArr) => {
     const options = { 
         hour: 'numeric',
@@ -373,7 +373,7 @@ const toTwelveHourTime = (sleepCyclesArr) => {
 
 Now we can use it to wrap our \`copy\` of sleep cycles and return a more human readable time.
 
-~~~js
+~~~javascript
 const getWakeUpTimes = (event) => {
     event.preventDefault();
 
@@ -413,7 +413,7 @@ is tedious. Lots of \`createElement\`, \`appendChild\`, \`textContent\`, \`inner
 Instead with React we could return JSX. In my opinion our UI's are so tightly coupled to JavaScript it makes sense. I'm returning 
 HTML as a string here. Why not return it with syntax highlighting and extended features? (If you can't tell I love React.)
 
-~~~js
+~~~javascript
 const render = (isErrors, sleepCycles) => {
     const results = document.querySelector('div#results');
 
@@ -432,7 +432,7 @@ const render = (isErrors, sleepCycles) => {
 
 Finally, let's add our \`render\` function to \`getWakeUpTimes\`.
 
-~~~js
+~~~javascript
 const getWakeUpTimes = (event) => {
     event.preventDefault();
 

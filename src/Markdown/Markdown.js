@@ -3,9 +3,9 @@ import ReactMarkdown from 'react-markdown'
 import CodeBlock from './CodeBlock';
 import '../App.css'
 
-const Markdown = ({markdown, mdClassName}) => {
+const Markdown = ({markdown, mdClassName, language}) => {
     return (
-        <ReactMarkdown className={mdClassName} renderers={{code: CodeBlock}} children={markdown} />
+        <ReactMarkdown className={mdClassName} language={language} renderers={{code: CodeBlock}} children={markdown} />
     );
 };
 

@@ -4,7 +4,7 @@ import '../Pages/Home/css/index.css';
 
 const CodeBlock = ({ value, language }) => {
     return (
-        <SyntaxHighlighter style={tomorrow} language='typescript' children={value} />
+        <SyntaxHighlighter style={tomorrow} language={language} children={value} />
     );
 };
 

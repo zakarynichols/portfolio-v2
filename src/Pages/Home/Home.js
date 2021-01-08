@@ -7,7 +7,7 @@ import Hero from './components/Hero';
 const Home = () => {
   const mdWidth = 'md-width'
   const markdown = `
-~~~
+~~~javascript
 const favoriteParadigm = (paradigm) => \`I love \${paradigm} programming!\`;
 const myFavorite = favoriteParadigm('functional');
 ~~~
