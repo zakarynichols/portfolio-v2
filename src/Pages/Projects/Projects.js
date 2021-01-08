@@ -1,4 +1,3 @@
-import { faItalic } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import {
     handyDiet,
@@ -15,7 +14,7 @@ const Projects = () => {
             name: 'BedTime-v2',
             image: bedTime,
             tech: [
-                { class: 'devicon-javascript-plain colored mr-1' },
+                { class: 'devicon-typescript-plain colored mr-1' },
                 { class: 'devicon-html5-plain colored mr-1' },
                 { class: 'devicon-css3-plain colored' }
             ]
@@ -86,7 +85,7 @@ const Projects = () => {
                     has been the most efficient way to grow.
                 </p>
                 <p>
-                    I'm a professional programmer, not a teacher. If I'm not clear or something doesn't make sense, I apologize. Send me an email and maybe I can help. - <a href="mailto:portfolio@zaknichols.com">portfolio@zaknichols.com</a> 
+                    I'm a programmer first, not a teacher. If I'm not clear or something doesn't make sense, I apologize. I'm always looking for ways to improve my teaching. Send me an email and maybe I can help. - <a href="mailto:portfolio@zaknichols.com">portfolio@zaknichols.com</a> 
                 </p>
             </div>
             <div style={{ width: '75vw', margin: 'auto', display: 'flex', marginBottom: '40px', justifyContent: 'center', flexWrap: 'wrap' }}>

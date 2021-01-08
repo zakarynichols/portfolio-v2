@@ -3,7 +3,6 @@ import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import '../Pages/Home/css/index.css';  
 
 const CodeBlock = ({ value, language }) => {
-    console.warn(value, language)
     return (
         <SyntaxHighlighter style={tomorrow} language='typescript' children={value} />
     );

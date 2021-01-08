@@ -9,7 +9,7 @@ const Home = () => {
   const markdown = `
 ~~~
 const favoriteParadigm = (paradigm) => \`I love \${paradigm} programming!\`;
-const myFavorite = ('functional');
+const myFavorite = favoriteParadigm('functional');
 ~~~
 `
   return (

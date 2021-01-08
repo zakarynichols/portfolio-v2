@@ -16,30 +16,34 @@ const App = () => {
     document.title = `Zak Nichols | Portfolio`
   }, []);
 
-  // const history = useHistory();
-  // useEffect(() => {
-  //   history.listen(({ pathname }) => {
-  //     document.title = `Zak Nichols | ${pathname} | Portfolio`;
-  //   });
-  // }, [history.location.pathname]);
+// const history = useHistory();
+// useEffect(() => {
+//   history.listen(({ pathname }) => {
+//     document.title = `Zak Nichols | ${pathname} | Portfolio`;
+//   });
+// }, [history.location.pathname]);
 
-  return (
-    <Fragment>
-      <Navbar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/projects">
-          <Projects />
-        </Route>
-        <Route exact path="/project/:name">
-          <Project />
-        </Route>
-      </Switch>
-      <Footer />
-    </Fragment>
-  );
+(() => {
+  console.log('%c%s', 'color: white; background: black; font-size: 24px; border: 1px solid black; border-radius: 10px; padding: 5px;', 'I see you! 👋')
+})();
+
+return (
+  <Fragment>
+    <Navbar />
+    <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route exact path="/projects">
+        <Projects />
+      </Route>
+      <Route exact path="/project/:name">
+        <Project />
+      </Route>
+    </Switch>
+    <Footer />
+  </Fragment>
+);
 };
 export default App;
 

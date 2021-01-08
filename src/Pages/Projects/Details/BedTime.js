@@ -9,6 +9,7 @@ const BedTime = ({ name }) => {
 # ${name.charAt(0).toUpperCase() + name.slice(1)} 🌒
 ### [Live Demo](https://zaknicholsdev.github.io/bedtime-v2/)
 ### [Code](https://github.com/zaknicholsdev/bedtime-v2)
+### Typescript tutorial coming soon!
 ## What you will learn
 - First-class functions: [Ex: Assigning functions in variables](https://en.wikipedia.org/wiki/First-class_function)
 - Composability: [Writing modular and stateless functions](https://en.wikipedia.org/wiki/Composability#:~:text=Composability%20is%20a%20system%20design,to%20satisfy%20specific%20user%20requirements.)
