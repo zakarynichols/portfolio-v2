@@ -5,12 +5,11 @@ import Technologies from './components/Technologies';
 import Hero from './components/Hero';
 
 const Home = () => {
-
   const mdWidth = 'md-width'
   const markdown = `
-~~~javascript
-const favParadigm = (paradigm) => \`I love \${paradigm} programming!\`;
-const myFav = favParadigm('functional');
+~~~
+const favoriteParadigm = (paradigm) => \`I love \${paradigm} programming!\`;
+const myFavorite = ('functional');
 ~~~
 `
   return (

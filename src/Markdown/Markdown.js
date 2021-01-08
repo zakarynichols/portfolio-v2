@@ -5,7 +5,7 @@ import '../App.css'
 
 const Markdown = ({markdown, mdClassName}) => {
     return (
-        <ReactMarkdown className={mdClassName} language={'javascript'} renderers={{code: CodeBlock}} children={markdown} />
+        <ReactMarkdown className={mdClassName} renderers={{code: CodeBlock}} children={markdown} />
     );
 };
 
