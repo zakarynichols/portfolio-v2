@@ -8,6 +8,8 @@ import {
     handydietV2
 } from './projectsExports';
 
+import { firebase } from '../../Pages/Home/technologies';
+
 const Projects = () => {
     const projects = [
         {
@@ -16,14 +18,15 @@ const Projects = () => {
             tech: [
                 { class: 'devicon-typescript-plain colored mr-1' },
                 { class: 'devicon-html5-plain colored mr-1' },
-                { class: 'devicon-css3-plain colored' }
+                { class: 'devicon-css3-plain colored' },
             ]
         },
         {
             name: 'Adopty',
             image: adopty,
             tech: [
-                { class: 'devicon-vuejs-plain colored mr-1' },
+                { class: 'devicon-vuejs-plain colored' },
+                { class: firebase },
                 { class: 'devicon-javascript-plain colored mr-1' },
                 { class: 'devicon-html5-plain colored mr-1' },
                 { class: 'devicon-css3-plain colored' }
@@ -97,6 +100,9 @@ const Projects = () => {
                                 <h5 className="card-title">{p.name}</h5>
                                 <div>
                                     {p.tech.map((t, index) => {
+                                        if (t.class === firebase) {
+                                            return <img key={index} alt="firebase" src={firebase} style={{marginBottom: '12.5px', width: '22.5px', height: '22px'}} />
+                                        };
                                         return (
                                             <i key={index} style={{ fontSize: '1.5em' }} className={t.class} />
                                         );

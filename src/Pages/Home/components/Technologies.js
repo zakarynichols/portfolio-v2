@@ -10,12 +10,12 @@ import {
   postgres,
   mysql,
   mongo,
-  php,
   figma,
   vscode,
   git,
   github,
-  capacitor
+  capacitor,
+  firebase
 } from '../technologies';
 
 const Technologies = () => {
@@ -35,7 +35,7 @@ const Technologies = () => {
     ScrollReveal().reveal('.reveal', options)
     ScrollReveal().reveal('.fade-reveal', fadeOptions)
   }, []);
-  
+
   return (
     <section className="technologies mt-3 container" style={{ marginBottom: '75px' }}>
       <h1 className="header-links"><strong>Technologies</strong></h1>
@@ -82,8 +82,8 @@ const Technologies = () => {
           <span>MongoDB</span>
         </div>
         <div className="reveal load-hidden">
-          <img className="img-responsive" src={php} alt="" />
-          <span>PHP</span>
+          <img className="img-responsive" src={firebase} alt="" />
+          <span>Firebase</span>
         </div>
       </div>
 
