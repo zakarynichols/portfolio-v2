@@ -35,10 +35,7 @@ const Technologies = () => {
     ScrollReveal().reveal('.reveal', options)
     ScrollReveal().reveal('.fade-reveal', fadeOptions)
   }, []);
-
-  // TODO: Instead of html replace with a JSON
-  // array of objects about the technologies
-  // and map over the array.
+  
   return (
     <section className="technologies mt-3 container" style={{ marginBottom: '75px' }}>
       <h1 className="header-links"><strong>Technologies</strong></h1>
@@ -50,7 +47,7 @@ const Technologies = () => {
         </div>
         <div className="reveal load-hidden">
           <img className="img-responsive" src={typescript} alt="" />
-          <span>Typescript</span>
+          <span>TypeScript</span>
         </div>
         <div className="reveal load-hidden">
           <img className="img-responsive" src={react} alt="" />
