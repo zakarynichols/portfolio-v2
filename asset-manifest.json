@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.10baa20f.chunk.css",
-    "main.js": "/static/js/main.711e68e6.chunk.js",
-    "main.js.map": "/static/js/main.711e68e6.chunk.js.map",
+    "main.js": "/static/js/main.48da1c4d.chunk.js",
+    "main.js.map": "/static/js/main.48da1c4d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6e94f981.js",
     "runtime-main.js.map": "/static/js/runtime-main.6e94f981.js.map",
     "static/js/2.29607a5e.chunk.js": "/static/js/2.29607a5e.chunk.js",
@@ -18,6 +18,7 @@
     "static/media/capacitor.svg": "/static/media/capacitor.a27c08a6.svg",
     "static/media/css.svg": "/static/media/css.c0d58b03.svg",
     "static/media/figma.svg": "/static/media/figma.753c0742.svg",
+    "static/media/firebase.svg": "/static/media/firebase.7840999a.svg",
     "static/media/git.svg": "/static/media/git.a63f9eab.svg",
     "static/media/github.svg": "/static/media/github.3ea7d9bc.svg",
     "static/media/handydiet.png": "/static/media/handydiet.b0115a49.png",
@@ -28,7 +29,6 @@
     "static/media/moovy.png": "/static/media/moovy.5245b3e1.png",
     "static/media/mysql.svg": "/static/media/mysql.64f88a81.svg",
     "static/media/node.svg": "/static/media/node.59c00966.svg",
-    "static/media/php.svg": "/static/media/php.8c49448b.svg",
     "static/media/postgres.svg": "/static/media/postgres.6174db8b.svg",
     "static/media/react.svg": "/static/media/react.81db2bfe.svg",
     "static/media/typescript-original.svg": "/static/media/typescript-original.8aa2c2d0.svg",
@@ -39,6 +39,6 @@
     "static/js/runtime-main.6e94f981.js",
     "static/js/2.29607a5e.chunk.js",
     "static/css/main.10baa20f.chunk.css",
-    "static/js/main.711e68e6.chunk.js"
+    "static/js/main.48da1c4d.chunk.js"
   ]
 }
