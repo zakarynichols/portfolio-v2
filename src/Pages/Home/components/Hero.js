@@ -20,7 +20,7 @@ const Hero = () => {
                 <Link className="btn text-white m-2 py-2 header-links project-button" to="/projects">
                     <FontAwesomeIcon icon={faPencilRuler} /><span> PROJECTS</span>
                 </Link>
-                <a className="btn text-white m-2 py-2 header-links project-button" href="https://github.com/zaknicholsdev">
+                <a className="btn text-white m-2 py-2 header-links g-button" href="https://github.com/zaknicholsdev">
                     <FontAwesomeIcon icon={faGithub} /><span> GITHUB</span>
                 </a>
             </div>
