@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.10baa20f.chunk.css",
-    "main.js": "/static/js/main.48da1c4d.chunk.js",
-    "main.js.map": "/static/js/main.48da1c4d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.6e94f981.js",
-    "runtime-main.js.map": "/static/js/runtime-main.6e94f981.js.map",
-    "static/js/2.29607a5e.chunk.js": "/static/js/2.29607a5e.chunk.js",
-    "static/js/2.29607a5e.chunk.js.map": "/static/js/2.29607a5e.chunk.js.map",
-    "static/js/3.fcf03341.chunk.js": "/static/js/3.fcf03341.chunk.js",
-    "static/js/3.fcf03341.chunk.js.map": "/static/js/3.fcf03341.chunk.js.map",
+    "main.js": "/static/js/main.f703de4f.chunk.js",
+    "main.js.map": "/static/js/main.f703de4f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d60e6069.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d60e6069.js.map",
+    "static/js/2.51389c7d.chunk.js": "/static/js/2.51389c7d.chunk.js",
+    "static/js/2.51389c7d.chunk.js.map": "/static/js/2.51389c7d.chunk.js.map",
+    "static/js/3.8f07218b.chunk.js": "/static/js/3.8f07218b.chunk.js",
+    "static/js/3.8f07218b.chunk.js.map": "/static/js/3.8f07218b.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.10baa20f.chunk.css.map": "/static/css/main.10baa20f.chunk.css.map",
-    "static/js/2.29607a5e.chunk.js.LICENSE.txt": "/static/js/2.29607a5e.chunk.js.LICENSE.txt",
+    "static/js/2.51389c7d.chunk.js.LICENSE.txt": "/static/js/2.51389c7d.chunk.js.LICENSE.txt",
     "static/media/adopty.png": "/static/media/adopty.f928bda0.png",
     "static/media/bedtime.png": "/static/media/bedtime.3656f40e.png",
     "static/media/calc.png": "/static/media/calc.f802c1db.png",
@@ -29,16 +29,18 @@
     "static/media/moovy.png": "/static/media/moovy.5245b3e1.png",
     "static/media/mysql.svg": "/static/media/mysql.64f88a81.svg",
     "static/media/node.svg": "/static/media/node.59c00966.svg",
+    "static/media/online-warrior-classic.png": "/static/media/online-warrior-classic.e5bde2f0.png",
     "static/media/postgres.svg": "/static/media/postgres.6174db8b.svg",
+    "static/media/postman.svg": "/static/media/postman.52856718.svg",
     "static/media/react.svg": "/static/media/react.81db2bfe.svg",
     "static/media/typescript-original.svg": "/static/media/typescript-original.8aa2c2d0.svg",
     "static/media/ubuntu.svg": "/static/media/ubuntu.7d9bed33.svg",
     "static/media/vscode.svg": "/static/media/vscode.f8f6eda9.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6e94f981.js",
-    "static/js/2.29607a5e.chunk.js",
+    "static/js/runtime-main.d60e6069.js",
+    "static/js/2.51389c7d.chunk.js",
     "static/css/main.10baa20f.chunk.css",
-    "static/js/main.48da1c4d.chunk.js"
+    "static/js/main.f703de4f.chunk.js"
   ]
 }
