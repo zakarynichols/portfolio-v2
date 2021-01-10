@@ -6,6 +6,7 @@ import Adopty from '../Details/Adopty';
 import Calculator from '../Details/Calculator';
 import MovieSearch from '../Details/MovieSearch';
 import HandyDietV2 from '../Details/HandyDietV2';
+import OnlineWarriorClassic from '../Details/OnlineWarriorClassic';
 
 const Project = () => {
     const { name } = useParams();
@@ -13,6 +14,8 @@ const Project = () => {
     switch (name) {
         case 'BedTime-v2':
             return <BedTime name={name} />
+        case 'Online Warrior Classic':
+            return <OnlineWarriorClassic name={name} />
         case 'EasyDiet':
             return <HandyDiet name={name} />
         case 'Adopty':

@@ -9,13 +9,13 @@ import {
   node,
   postgres,
   mysql,
-  mongo,
   figma,
   vscode,
   git,
   github,
   capacitor,
-  firebase
+  firebase,
+  postman
 } from '../technologies';
 
 const Technologies = () => {
@@ -78,8 +78,8 @@ const Technologies = () => {
           <span>MySQL</span>
         </div>
         <div className="reveal load-hidden">
-          <img className="img-responsive" src={mongo} alt="" />
-          <span>MongoDB</span>
+          <img className="img-responsive" src={postman} alt="" />
+          <span>Postman</span>
         </div>
         <div className="reveal load-hidden">
           <img className="img-responsive" src={firebase} alt="" />
@@ -87,7 +87,7 @@ const Technologies = () => {
         </div>
       </div>
 
-      <h3 className="pt-5 header-links fade-reveal load-hidden">DevOps & Tools</h3>
+      <h3 className="pt-5 header-links fade-reveal load-hidden">Tools</h3>
       <div className="mx-3 icons" id="dev-ops">
         <div className="reveal load-hidden">
           <img className="img-responsive" src={git} alt="" />

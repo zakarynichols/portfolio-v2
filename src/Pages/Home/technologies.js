@@ -14,6 +14,7 @@ const { default: github } = require('../../assets/images/github.svg');
 const { default: capacitor } = require('../../assets/images/capacitor.svg');
 const { default: typescript } = require('../../assets/images/typescript-original.svg');
 const { default: firebase } = require('../../assets/images/firebase.svg');
+const { default: postman } = require('../../assets/images/postman.svg');
 
 export {
     firebase,
@@ -31,5 +32,6 @@ export {
     vscode,
     git,
     github,
-    capacitor
+    capacitor,
+    postman
 };

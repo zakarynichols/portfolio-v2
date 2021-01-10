@@ -5,7 +5,8 @@ import {
     movieSearch,
     calc,
     adopty,
-    handydietV2
+    handydietV2,
+    onlineWarriorClassic
 } from './projectsExports';
 
 import { firebase } from '../../Pages/Home/technologies';
@@ -17,6 +18,17 @@ const Projects = () => {
             image: bedTime,
             tech: [
                 { class: 'devicon-typescript-plain colored mr-1' },
+                { class: 'devicon-html5-plain colored mr-1' },
+                { class: 'devicon-css3-plain colored' },
+            ]
+        },
+        {
+            name: 'Online Warrior Classic',
+            image: onlineWarriorClassic,
+            tech: [
+                { class: 'devicon-nodejs-plain colored mr-1' },
+                { class: 'devicon-postgresql-plain colored mr-1' },
+                { class: 'devicon-react-plain colored mr-1' },
                 { class: 'devicon-html5-plain colored mr-1' },
                 { class: 'devicon-css3-plain colored' },
             ]
@@ -84,11 +96,10 @@ const Projects = () => {
                     As a professional software developer I've crafted many solutions to many different problems.
                     It's allowed me to see the many patterns and paradigms in JavaScript and it's ecosystem.
                 </p>
-                <p>I'm re-writing each project and including a tutorial in hopes that other's can get some benefit. In my experience building applications 
-                    has been the most efficient way to grow.
+                <p>In my free time, I've been writing tutorials in hopes that others can get some benefit. In my experience, building applications have been the most efficient way to grow, so I'm trying to attach a tutorial to each project.
                 </p>
                 <p>
-                    I'm a programmer first, not a teacher. If I'm not clear or something doesn't make sense, I apologize. I'm always looking for ways to improve my teaching. Send me an email and maybe I can help. - <a href="mailto:portfolio@zaknichols.com">portfolio@zaknichols.com</a> 
+                    If something in my tutorials are not clear or something doesn't make sense, I apologize. I'm always looking for ways to improve my teaching. Send me an email and maybe I can help. - <a href="mailto:portfolio@zaknichols.com">portfolio@zaknichols.com</a>
                 </p>
             </div>
             <div style={{ width: '75vw', margin: 'auto', display: 'flex', marginBottom: '40px', justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -101,7 +112,7 @@ const Projects = () => {
                                 <div>
                                     {p.tech.map((t, index) => {
                                         if (t.class === firebase) {
-                                            return <img key={index} alt="firebase" src={firebase} style={{marginBottom: '12.5px', width: '22.5px', height: '22px'}} />
+                                            return <img key={index} alt="firebase" src={firebase} style={{ marginBottom: '12.5px', width: '22.5px', height: '22px' }} />
                                         };
                                         return (
                                             <i key={index} style={{ fontSize: '1.5em' }} className={t.class} />
