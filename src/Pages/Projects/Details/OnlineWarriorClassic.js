@@ -9,18 +9,19 @@ const OnlineWarriorClassic = ({ name }) => {
     const markdown = `
 # ${name} 🏆
 ### [Code](https://github.com/zaknicholsdev/online-warrior-classic)
-Online Warrior Classic is a full-stack web application where users can vote, discuss, and favorite different athletes from various leagues. The most favorited athletes will rank the highest.  
+Online Warrior Classic is a full-stack web application where users can create a profile and vote, discuss, and favorite different athletes from various leagues. The most favorited athletes will rank the highest.  
 
 
 ### Features ✨
 - Authentication & Authorization (httyOnly secure cookie)
+- Edit profile
+- Delete profile
+- Upload images (avatar and athletes)
 - View popular athletes
 - Sort athletes by league
 - Like different athletes
 - Comment and discuss different athletes
 - Save favorite athletes to view later
-- Edit profile
-- Delete profile
 
 ### In progress... ✏️
 - Roles [Admin, moderator, user] 
