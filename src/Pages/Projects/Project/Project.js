@@ -7,6 +7,7 @@ import Calculator from '../Details/Calculator';
 import MovieSearch from '../Details/MovieSearch';
 import HandyDietV2 from '../Details/HandyDietV2';
 import OnlineWarriorClassic from '../Details/OnlineWarriorClassic';
+import Portfolio from '../Details/Portfolio';
 
 const Project = () => {
     const { name } = useParams();
@@ -20,6 +21,8 @@ const Project = () => {
             return <HandyDiet name={name} />
         case 'Adopty':
             return <Adopty name={name} />
+        case 'Portfolio':
+            return <Portfolio name={name} />
         case 'Calculator':
             return <Calculator name={name} />
         case 'MovieSearch':

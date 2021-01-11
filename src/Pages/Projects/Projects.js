@@ -6,7 +6,9 @@ import {
     calc,
     adopty,
     handydietV2,
-    onlineWarriorClassic
+    onlineWarriorClassic,
+    markdown,
+    portfolio
 } from './projectsExports';
 
 import { firebase } from '../../Pages/Home/technologies';
@@ -42,6 +44,17 @@ const Projects = () => {
                 { class: 'devicon-javascript-plain colored mr-1' },
                 { class: 'devicon-html5-plain colored mr-1' },
                 { class: 'devicon-css3-plain colored' }
+            ]
+        },
+        {
+            name: 'Portfolio',
+            image: portfolio,
+            tech: [
+                { class: 'devicon-react-plain colored mr-1' },
+                { class: 'devicon-javascript-plain colored mr-1' },
+                { class: 'devicon-html5-plain colored mr-1' },
+                { class: 'devicon-css3-plain colored' },
+                { class: markdown },
             ]
         },
         {
@@ -114,6 +127,9 @@ const Projects = () => {
                                         if (t.class === firebase) {
                                             return <img key={index} alt="firebase" src={firebase} style={{ marginBottom: '12.5px', width: '22.5px', height: '22px' }} />
                                         };
+                                        if (t.class === markdown) {
+                                            return <img key={index} alt="markdown" src={markdown} style={{ marginBottom: '12.5px', marginRight: '4px', marginLeft: '4px', width: '22.5px', height: '22px' }} />
+                                        }
                                         return (
                                             <i key={index} style={{ fontSize: '1.5em' }} className={t.class} />
                                         );
