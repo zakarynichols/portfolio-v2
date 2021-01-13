@@ -78,7 +78,7 @@ const Projects = () => {
             ]
         },
         {
-            name: 'MovieSearch',
+            name: 'Filmatory',
             image: movieSearch,
             tech: [
                 { class: 'devicon-react-original colored mr-1' },

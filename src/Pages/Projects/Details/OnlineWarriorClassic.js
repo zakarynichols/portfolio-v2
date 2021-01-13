@@ -9,7 +9,7 @@ const OnlineWarriorClassic = ({ name }) => {
     const markdown = `
 # ${name} 🏆
 ### [Code](https://github.com/zaknicholsdev/online-warrior-classic)
-Online Warrior Classic is a full-stack web application where users can create a profile and vote, discuss, and favorite different athletes from various leagues. The most favorited athletes will rank the highest.  
+Online Warrior Classic is a full-stack web application where users can create a profile, vote, and different athletes from various leagues. The most favorited athletes will rank the highest.  
 
 
 ### Features ✨

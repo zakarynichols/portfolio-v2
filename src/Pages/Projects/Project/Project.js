@@ -4,7 +4,7 @@ import BedTime from '../Details/BedTime';
 import HandyDiet from '../Details/HandyDiet';
 import Adopty from '../Details/Adopty';
 import Calculator from '../Details/Calculator';
-import MovieSearch from '../Details/MovieSearch';
+import Filmatory from '../Details/Filmatory';
 import HandyDietV2 from '../Details/HandyDietV2';
 import OnlineWarriorClassic from '../Details/OnlineWarriorClassic';
 import Portfolio from '../Details/Portfolio';
@@ -25,8 +25,8 @@ const Project = () => {
             return <Portfolio name={name} />
         case 'Calculator':
             return <Calculator name={name} />
-        case 'MovieSearch':
-            return <MovieSearch name={name} />
+        case 'Filmatory':
+            return <Filmatory name={name} />
         case 'HandyDiet-v2':
             return <HandyDietV2 name={name} />
         default:
