@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.eef99174.chunk.css",
-    "main.js": "/static/js/main.11425073.chunk.js",
-    "main.js.map": "/static/js/main.11425073.chunk.js.map",
+    "main.js": "/static/js/main.565aec3c.chunk.js",
+    "main.js.map": "/static/js/main.565aec3c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ad035139.js",
     "runtime-main.js.map": "/static/js/runtime-main.ad035139.js.map",
     "static/js/2.d0776330.chunk.js": "/static/js/2.d0776330.chunk.js",
@@ -12,7 +12,7 @@
     "index.html": "/index.html",
     "static/css/main.eef99174.chunk.css.map": "/static/css/main.eef99174.chunk.css.map",
     "static/js/2.d0776330.chunk.js.LICENSE.txt": "/static/js/2.d0776330.chunk.js.LICENSE.txt",
-    "static/media/adopty.png": "/static/media/adopty.f928bda0.png",
+    "static/media/adopty.png": "/static/media/adopty.d8ade32f.png",
     "static/media/bedtime.png": "/static/media/bedtime.3656f40e.png",
     "static/media/calc.png": "/static/media/calc.f802c1db.png",
     "static/media/capacitor.svg": "/static/media/capacitor.a27c08a6.svg",
@@ -21,8 +21,8 @@
     "static/media/firebase.svg": "/static/media/firebase.7840999a.svg",
     "static/media/git.svg": "/static/media/git.a63f9eab.svg",
     "static/media/github.svg": "/static/media/github.3ea7d9bc.svg",
-    "static/media/handydiet.png": "/static/media/handydiet.b0115a49.png",
-    "static/media/handydietv2.png": "/static/media/handydietv2.c6a86033.png",
+    "static/media/handydiet.png": "/static/media/handydiet.f533eba8.png",
+    "static/media/handydietv2.png": "/static/media/handydietv2.c646a5ad.png",
     "static/media/ionic.svg": "/static/media/ionic.7cf1fe37.svg",
     "static/media/javascript.svg": "/static/media/javascript.2ccf65fc.svg",
     "static/media/markdown.svg": "/static/media/markdown.866163e7.svg",
@@ -43,6 +43,6 @@
     "static/js/runtime-main.ad035139.js",
     "static/js/2.d0776330.chunk.js",
     "static/css/main.eef99174.chunk.css",
-    "static/js/main.11425073.chunk.js"
+    "static/js/main.565aec3c.chunk.js"
   ]
 }
