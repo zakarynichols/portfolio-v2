@@ -119,7 +119,7 @@ const Projects = () => {
                 {projects.map((p, index) => {
                     return (
                         <div key={index} className="card m-3" style={{ width: '18rem' }}>
-                            <img className="card-img-top" src={p.image} alt="Project" />
+                            <img loading="lazy" className="card-img-top" src={p.image} alt="Project" />
                             <div className="card-body text-center">
                                 <h5 className="card-title">{p.name}</h5>
                                 <div>
