@@ -10,7 +10,7 @@ const Hero = () => {
                 <strong>Hi, I'm Zak <span className="wave">👋</span></strong>
             </h1>
             <p className="mt-3 mx-2">
-                Software Developer from Elkhart, IN. Self-taught with a focus on functional programming. Interested in all front-end technologies.
+                Full-Stack Software Engineer from Elkhart, IN. Self-taught with a focus on functional programming. Interested in all web technologies.
             </p>
             <p className="mt-3 mx-2">
                 Experience developing dynamic user interfaces in JavaScript, manipulating the DOM, managing state, consuming API's, HTTP Protocol,
