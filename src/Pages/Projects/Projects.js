@@ -10,14 +10,14 @@ import {
     markdown,
     portfolio
 } from './projectsExports';
-
 import { firebase } from '../../Pages/Home/technologies';
 
 const Projects = () => {
     const projects = [
         {
-            name: 'BedTime-v2',
+            name: 'LateSleeper 🌒',
             image: bedTime,
+            description: 'Give LateSleeper a time you\'d like to go to bed and get back the best times to sleep based on sleep cycles.',
             tech: [
                 { class: 'devicon-typescript-plain colored mr-1' },
                 { class: 'devicon-html5-plain colored mr-1' },
@@ -25,8 +25,9 @@ const Projects = () => {
             ]
         },
         {
-            name: 'Online Warrior Classic',
+            name: 'Online Warrior Classic 🏆',
             image: onlineWarriorClassic,
+            description: 'Register for an account to vote and comment on your favorite athletes from different leagues. The highest voted athlete rates at the top.',
             tech: [
                 { class: 'devicon-nodejs-plain colored mr-1' },
                 { class: 'devicon-postgresql-plain colored mr-1' },
@@ -38,6 +39,7 @@ const Projects = () => {
         {
             name: 'Adopty',
             image: adopty,
+            description: 'Log in as an administrator to manage the inventory of cats and dogs in the animal shelter. Potential adopters can view pets once added.',
             tech: [
                 { class: 'devicon-vuejs-plain colored' },
                 { class: firebase },
@@ -49,6 +51,7 @@ const Projects = () => {
         {
             name: 'Portfolio',
             image: portfolio,
+            description: 'The source code to my little home on the internet.',
             tech: [
                 { class: 'devicon-react-plain colored mr-1' },
                 { class: 'devicon-javascript-plain colored mr-1' },
@@ -125,17 +128,17 @@ const Projects = () => {
                                 <div>
                                     {p.tech.map((t, index) => {
                                         if (t.class === firebase) {
-                                            return <img key={index} alt="firebase" src={firebase} style={{ marginBottom: '12.5px', width: '22.5px', height: '22px' }} />
+                                            return <img key={index} alt="firebase" src={firebase} style={{ marginTop: '-12.5px', width: '22.5px', height: '22px' }} />
                                         };
                                         if (t.class === markdown) {
-                                            return <img key={index} alt="markdown" src={markdown} style={{ marginBottom: '12.5px', marginRight: '4px', marginLeft: '4px', width: '22.5px', height: '22px' }} />
+                                            return <img key={index} alt="markdown" src={markdown} style={{ marginTop: '-12.5px', marginRight: '4px', marginLeft: '4px', width: '22.5px', height: '22px' }} />
                                         }
                                         return (
                                             <i key={index} style={{ fontSize: '1.5em' }} className={t.class} />
                                         );
                                     })}
                                 </div>
-                                <br />
+                                <p style={{ boxSizing: 'border-box', flexBasis: '100%' }}>{p.description}</p>
                                 <Link to={`/project/${p.name}`} style={{ border: 'none', backgroundColor: '#1e2631' }} className="btn btn-primary">View</Link>
                             </div>
                         </div>

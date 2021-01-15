@@ -6,7 +6,7 @@ const BedTime = ({ name }) => {
     }, []);
     const width = "w"
     const markdown = `
-# ${name.charAt(0).toUpperCase() + name.slice(1)} 🌒
+# ${name.charAt(0).toUpperCase() + name.slice(1)}
 ### [Live Demo](https://zaknicholsdev.github.io/bedtime-v2/)
 ### [Code](https://github.com/zaknicholsdev/bedtime-v2)
 ### Typescript tutorial coming soon!
