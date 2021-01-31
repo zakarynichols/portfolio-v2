@@ -56,13 +56,13 @@ const Projects = () => {
                 { class: 'devicon-react-plain colored mr-1' },
                 { class: 'devicon-javascript-plain colored mr-1' },
                 { class: 'devicon-html5-plain colored mr-1' },
-                { class: 'devicon-css3-plain colored' },
-                { class: markdown },
+                { class: 'devicon-css3-plain colored' }
             ]
         },
         {
             name: 'HandyDiet-v2',
             image: handydietV2,
+            description: 'Re-writing my class-based React application, HandyDiet, with function components using hooks.',
             tech: [
                 { class: 'devicon-react-original colored mr-1' },
                 { class: 'devicon-javascript-plain colored mr-1' },
@@ -108,15 +108,6 @@ const Projects = () => {
                 <h1 className="header-links mx-2 text-center" style={{ fontSize: '2.5em' }}>
                     <strong>Projects</strong>
                 </h1>
-                <p>
-                    As a professional software developer I've crafted many solutions to many different problems.
-                    It's allowed me to see the many patterns and paradigms in JavaScript and it's ecosystem.
-                </p>
-                <p>In my free time, I've been writing tutorials in hopes that others can get some benefit. In my experience, building applications have been the most efficient way to grow, so I'm trying to attach a tutorial to each project.
-                </p>
-                <p>
-                    If something in my tutorials are not clear or something doesn't make sense, I apologize. I'm always looking for ways to improve my teaching. Send me an email and maybe I can help. - <a href="mailto:portfolio@zaknichols.com">portfolio@zaknichols.com</a>
-                </p>
             </div>
             <div style={{ width: '75vw', margin: 'auto', display: 'flex', marginBottom: '40px', justifyContent: 'center', flexWrap: 'wrap' }}>
                 {projects.map((p, index) => {
@@ -138,8 +129,8 @@ const Projects = () => {
                                         );
                                     })}
                                 </div>
-                                <p style={{ boxSizing: 'border-box', flexBasis: '100%' }}>{p.description}</p>
-                                <Link to={`/project/${p.name}`} style={{ border: 'none', backgroundColor: '#1e2631' }} className="btn btn-primary">View</Link>
+                                {/* <p style={{ boxSizing: 'border-box', flexBasis: '100%' }}>{p.description}</p> */}
+                                <Link to={`/project/${p.name}`} style={{ marginTop: '10px', border: 'none', backgroundColor: '#1e2631' }} className="btn btn-primary">View</Link>
                             </div>
                         </div>
                     );

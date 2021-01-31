@@ -10,11 +10,10 @@ const Hero = () => {
                 <strong>Hi, I'm Zak <span className="wave">👋</span></strong>
             </h1>
             <p className="mt-3 mx-2">
-                Full-Stack Software Engineer from Elkhart, IN. Self-taught with a focus on functional programming. Interested in all web technologies.
+                Full-Stack Software Engineer from Elkhart, IN. Self-taught with a focus on functional programming and object-oriented programming. Interested in all web technologies.
             </p>
             <p className="mt-3 mx-2">
-                Experience developing dynamic user interfaces in JavaScript, manipulating the DOM, managing state, consuming API's, HTTP Protocol,
-                writing queries in SQL, and building API's in Node with RESTful architecture.
+                Professional experience building RESTful web services, writing complex queries in SQL, managing statefulness, and creating user-interfaces.
             </p>
             <div className="hero-buttons text-center">
                 <Link className="btn text-white m-2 py-2 header-links project-button" to="/projects">

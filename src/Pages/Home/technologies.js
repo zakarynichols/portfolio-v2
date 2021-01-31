@@ -15,7 +15,8 @@ const { default: capacitor } = require('../../assets/images/capacitor.svg');
 const { default: typescript } = require('../../assets/images/typescript-original.svg');
 const { default: firebase } = require('../../assets/images/firebase.svg');
 const { default: postman } = require('../../assets/images/postman.svg');
-
+const { default: redux } = require('../../assets/images/redux.svg');
+const { default: vue } = require('../../assets/images/vue.svg');
 export {
     firebase,
     javascript,
@@ -33,5 +34,7 @@ export {
     git,
     github,
     capacitor,
-    postman
+    postman,
+    redux,
+    vue
 };
