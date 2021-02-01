@@ -1,0 +1,88 @@
+:root {
+    --background-colour: #323742;
+    --text-colour: #222;
+    --javascript: #efd81d;
+    --typescript: #2f74c0;
+    --go: #00ADD8;
+    --postgres: #31648c;
+    --nodejs: #78b460;
+    --reactjs: #78d8f7;
+    --vue: #3fb27f;
+    --firebase: #f5820b;
+}
+
+.pill {
+    border: 1px solid var(--text-colour);
+    font-size: 55%;
+    padding: 0 10px;
+    vertical-align: middle;
+    border-radius: 5px;
+    font-weight: 700;
+    color: var(--background-colour)
+}
+
+.php {
+    background-color: var(--php);
+    border-color: var(--php);
+    color: var(--background-colour)
+}
+
+.javascript {
+    background-color: var(--javascript);
+    border-color: var(--javascript);
+    color: var(--background-colour)
+}
+
+.go {
+    background-color: var(--go);
+    border-color: var(--go);
+    color: var(--background-colour);
+}
+
+.typescript {
+    background-color: var(--typescript);
+    border-color: var(--typescript);
+    color: var(--background-colour);
+}
+
+.postgres {
+    background-color: var(--postgres);
+    border-color: var(--postgres);
+    color: var(--background-colour);
+}
+
+.nodejs {
+    background-color: var(--nodejs);
+    border-color: var(--nodejs);
+    color: var(--background-colour);
+}
+
+.reactjs {
+    background-color: var(--reactjs);
+    border-color: var(--reactjs);
+    color: var(--background-colour);
+}
+
+.vue {
+    background-color: var(--vue);
+    border-color: var(--vue);
+    color: var(--background-colour);
+}
+
+.firebase {
+    background-color: var(--firebase);
+    border-color: var(--firebase);
+    color: var(--background-colour);
+}
+
+.p {
+    width: 50%;
+    margin: auto;
+}
+
+@media (max-width: 800px) {
+    .p {
+        width: 90%;
+        margin: auto;
+    }
+}

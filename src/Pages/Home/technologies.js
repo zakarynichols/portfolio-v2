@@ -17,6 +17,8 @@ const { default: firebase } = require('../../assets/images/firebase.svg');
 const { default: postman } = require('../../assets/images/postman.svg');
 const { default: redux } = require('../../assets/images/redux.svg');
 const { default: vue } = require('../../assets/images/vue.svg');
+const { default: go } = require('../../assets/images/go.svg');
+
 export {
     firebase,
     javascript,
@@ -36,5 +38,6 @@ export {
     capacitor,
     postman,
     redux,
-    vue
+    vue,
+    go
 };

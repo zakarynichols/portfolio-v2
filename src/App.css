@@ -1,5 +1,8 @@
-body {
+* {
   font-family: "Fira Sans", sans-serif;
+}
+
+body {
   background-color: #272b33;
   color: #8f96a3;
 }

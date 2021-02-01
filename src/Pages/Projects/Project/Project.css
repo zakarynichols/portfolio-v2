@@ -23,10 +23,6 @@ blockquote {
     quotes: "\201C""\201D""\2018""\2019";
 }
 
-html {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
 .gh-button {
     display: inline-block;
 }

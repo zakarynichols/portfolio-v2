@@ -13,9 +13,9 @@ import {
   github,
   capacitor,
   firebase,
-  postman,
   redux,
-  vue
+  vue,
+  go
 } from '../technologies';
 
 const Technologies = () => {
@@ -55,8 +55,8 @@ const Technologies = () => {
           <span>Postgres</span>
         </div>
         <div className="reveal load-hidden">
-          <img className="img-responsive" src={postman} alt="" />
-          <span>Postman</span>
+          <img className="img-responsive" src={go} alt="" />
+          <span>Go</span>
         </div>
         <div className="reveal load-hidden">
           <img className="img-responsive" src={firebase} alt="" />
@@ -75,12 +75,12 @@ const Technologies = () => {
           <span>Redux</span>
         </div>
         <div className="reveal load-hidden">
-          <img className="img-responsive" src={ionic} alt="" />
-          <span>Ionic</span>
-        </div>
-        <div className="reveal load-hidden">
           <img className="img-responsive" src={vue} alt="" />
           <span>Vue</span>
+        </div>
+        <div className="reveal load-hidden">
+          <img className="img-responsive" src={ionic} alt="" />
+          <span>Ionic</span>
         </div>
         <div className="reveal load-hidden">
           <img className="img-responsive" src={css} alt="" />

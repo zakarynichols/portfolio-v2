@@ -1,140 +1,34 @@
-import { Link } from 'react-router-dom';
-import {
-    handyDiet,
-    bedTime,
-    movieSearch,
-    calc,
-    adopty,
-    handydietV2,
-    onlineWarriorClassic,
-    markdown,
-    portfolio
-} from './projectsExports';
-import { firebase } from '../../Pages/Home/technologies';
+import './Project/projects.css'
 
 const Projects = () => {
-    const projects = [
-        {
-            name: 'LateSleeper 🌒',
-            image: bedTime,
-            description: 'Give LateSleeper a time you\'d like to go to bed and get back the best times to sleep based on sleep cycles.',
-            tech: [
-                { class: 'devicon-typescript-plain colored mr-1' },
-                { class: 'devicon-html5-plain colored mr-1' },
-                { class: 'devicon-css3-plain colored' },
-            ]
-        },
-        {
-            name: 'Online Warrior Classic 🏆',
-            image: onlineWarriorClassic,
-            description: 'Register for an account to vote and comment on your favorite athletes from different leagues. The highest voted athlete rates at the top.',
-            tech: [
-                { class: 'devicon-nodejs-plain colored mr-1' },
-                { class: 'devicon-postgresql-plain colored mr-1' },
-                { class: 'devicon-react-plain colored mr-1' },
-                { class: 'devicon-html5-plain colored mr-1' },
-                { class: 'devicon-css3-plain colored' },
-            ]
-        },
-        {
-            name: 'Adopty',
-            image: adopty,
-            description: 'Log in as an administrator to manage the inventory of cats and dogs in the animal shelter. Potential adopters can view pets once added.',
-            tech: [
-                { class: 'devicon-vuejs-plain colored' },
-                { class: firebase },
-                { class: 'devicon-javascript-plain colored mr-1' },
-                { class: 'devicon-html5-plain colored mr-1' },
-                { class: 'devicon-css3-plain colored' }
-            ]
-        },
-        {
-            name: 'Portfolio',
-            image: portfolio,
-            description: 'The source code to my little home on the internet.',
-            tech: [
-                { class: 'devicon-react-plain colored mr-1' },
-                { class: 'devicon-javascript-plain colored mr-1' },
-                { class: 'devicon-html5-plain colored mr-1' },
-                { class: 'devicon-css3-plain colored' }
-            ]
-        },
-        {
-            name: 'HandyDiet-v2',
-            image: handydietV2,
-            description: 'Re-writing my class-based React application, HandyDiet, with function components using hooks.',
-            tech: [
-                { class: 'devicon-react-original colored mr-1' },
-                { class: 'devicon-javascript-plain colored mr-1' },
-                { class: 'devicon-html5-plain colored mr-1' },
-                { class: 'devicon-css3-plain colored' }
-            ]
-        },
-        {
-            name: 'EasyDiet',
-            image: handyDiet,
-            tech: [
-                { class: 'devicon-react-original colored mr-1' },
-                { class: 'devicon-javascript-plain colored mr-1' },
-                { class: 'devicon-html5-plain colored mr-1' },
-                { class: 'devicon-css3-plain colored' }
-            ]
-        },
-        {
-            name: 'Filmatory',
-            image: movieSearch,
-            tech: [
-                { class: 'devicon-react-original colored mr-1' },
-                { class: 'devicon-javascript-plain colored mr-1' },
-                { class: 'devicon-html5-plain colored mr-1' },
-                { class: 'devicon-css3-plain colored' }
-            ]
-        },
-        {
-            name: 'Calculator',
-            image: calc,
-            tech: [
-                { class: 'devicon-react-original colored mr-1' },
-                { class: 'devicon-javascript-plain colored mr-1' },
-                { class: 'devicon-html5-plain colored mr-1' },
-                { class: 'devicon-css3-plain colored' }
-            ]
-        }
-    ];
-
     return (
-        <div>
+        <div style={{marginBottom: '5em'}}>
             <div className="container mt-2 hero-max-width" style={{ margin: 'auto' }}>
                 <h1 className="header-links mx-2 text-center" style={{ fontSize: '2.5em' }}>
                     <strong>Projects</strong>
                 </h1>
             </div>
-            <div style={{ width: '75vw', margin: 'auto', display: 'flex', marginBottom: '40px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                {projects.map((p, index) => {
-                    return (
-                        <div key={index} className="card m-3" style={{ width: '18rem' }}>
-                            <img loading="lazy" className="card-img-top" src={p.image} alt="Project" />
-                            <div className="card-body text-center">
-                                <h5 className="card-title">{p.name}</h5>
-                                <div>
-                                    {p.tech.map((t, index) => {
-                                        if (t.class === firebase) {
-                                            return <img key={index} alt="firebase" src={firebase} style={{ marginTop: '-12.5px', width: '22.5px', height: '22px' }} />
-                                        };
-                                        if (t.class === markdown) {
-                                            return <img key={index} alt="markdown" src={markdown} style={{ marginTop: '-12.5px', marginRight: '4px', marginLeft: '4px', width: '22.5px', height: '22px' }} />
-                                        }
-                                        return (
-                                            <i key={index} style={{ fontSize: '1.5em' }} className={t.class} />
-                                        );
-                                    })}
-                                </div>
-                                {/* <p style={{ boxSizing: 'border-box', flexBasis: '100%' }}>{p.description}</p> */}
-                                <Link to={`/project/${p.name}`} style={{ marginTop: '10px', border: 'none', backgroundColor: '#1e2631' }} className="btn btn-primary">View</Link>
-                            </div>
-                        </div>
-                    );
-                })}
+            <div className="mt-2 p">
+                <div className="project">
+                    <h4>CLI File Downloader <span className="pill go">Go</span></h4>
+                    <p>A file downloading CLI tool. Built without extending Go's standard library. This tool breaks large downloads into chunks to process individually with goroutines.<a href="https://github.com/zaknicholsdev/cli-file-downloader"> zaknicholsdev/cli-file-downloader</a></p>
+                </div>
+                <div className="project">
+                    <h4>Athlete Ranking Social Network <span className="pill javascript mr-1">JavaScript</span><span className="pill nodejs mr-1">Node</span><span className="pill postgres mr-1">Postgres</span><span className="pill reactjs">React</span></h4>
+                    <p>A full-stack JavaScript application where you can register for an account, upload pictures, vote and comment on your favorite athletes from different leagues. The highest voted athlete rates at the top.<a href="https://github.com/zaknicholsdev/online-warrior-classic"> zaknicholsdev/online-warrior-classic</a></p>
+                </div>
+                <div className="project">
+                    <h4>Animal Shelter Manager <span className="pill javascript mr-1">JavaScript</span><span className="pill firebase mr-1">Firebase</span><span className="pill vue mr-1">Vue</span></h4>
+                    <p>Login as an administrator to manage inventory of cats and dogs. Visitors can view cats and dogs available for adoption. The admin can upload cats and dogs with various details and an image describing the adoptable pet. Built with Vue and Firebase.<a href="https://github.com/zaknicholsdev/adopty"> zaknicholsdev/adopty</a></p>
+                </div>
+                <div className="project">
+                    <h4>Late Sleeper <span className="pill typescript">TypeScript</span></h4>
+                    <p>Input a time you'd like to go to bed or wake up and get back the best times to sleep based on sleep cycles. <a href="https://github.com/zaknicholsdev/late-sleeper"> zaknicholsdev/late-sleeper</a></p>
+                </div>
+                <div className="project">
+                    <h4>Filmatory <span className="pill javascript mr-1">JavaScript</span><span className="pill reactjs">React</span></h4>
+                    <p>Search for your favorite movies and get many different data points. The OMDB API web service will respond with actors, release date, run-time, ratings, plot, etc.<a href="https://github.com/zaknicholsdev/filmatory"> zaknicholsdev/filmatory</a></p>
+                </div>
             </div>
         </div>
     );
