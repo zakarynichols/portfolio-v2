@@ -6,8 +6,10 @@ import Hero from './components/Hero';
 const Home = () => {
   return (
     <Fragment>
-      <Hero />
-      <Technologies />
+      <div className="container" style={{ maxWidth: '768px', margin: 'auto' }}>
+        <Hero />
+        <Technologies />
+      </div>
     </Fragment>
   );
 };

@@ -43,7 +43,7 @@ const Technologies = () => {
   }, []);
 
   return (
-    <section className="technologies mt-3 container" style={{ marginBottom: '75px' }}>
+    <section className="technologies mt-3" style={{ marginBottom: '75px' }}>
       <h1 className="header-links"><strong>Technologies</strong></h1>
 
       <h3 className="pt-3 header-links fade-reveal load-hidden">Back End</h3>

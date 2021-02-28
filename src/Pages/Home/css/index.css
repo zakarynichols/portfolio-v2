@@ -194,16 +194,6 @@ span.wave {
   border-radius: 2.5px;
 }
 
-.icons {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.hero-max-width {
-  max-width: 500px;
-}
-
 .footer {
   height: 40px;
   color: white;

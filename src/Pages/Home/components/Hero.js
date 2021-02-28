@@ -5,8 +5,8 @@ import { faPencilRuler } from '@fortawesome/free-solid-svg-icons'
 
 const Hero = () => {
     return (
-        <section className="hero container my-3 hero-max-width">
-            <h1 className="header-links mx-2 text-center">
+        <section className="hero my-3 hero-max-width">
+            <h1 className="header-links">
                 <strong>Zak Nichols</strong>
             </h1>
             <p className="mt-3 mx-2">
