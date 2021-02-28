@@ -8,6 +8,7 @@ import {
   node,
   postgres,
   figma,
+  mongodb,
   vscode,
   git,
   github,
@@ -15,7 +16,12 @@ import {
   firebase,
   redux,
   vue,
-  go
+  go,
+  redis,
+  graphql,
+  docker,
+  ubuntu,
+  html
 } from '../technologies';
 
 const Technologies = () => {
@@ -59,6 +65,14 @@ const Technologies = () => {
           <span>Go</span>
         </div>
         <div className="reveal load-hidden">
+          <img className="img-responsive" src={redis} alt="" />
+          <span>Redis</span>
+        </div>
+        <div className="reveal load-hidden">
+          <img className="img-responsive" src={mongodb} alt="" />
+          <span>Mongo</span>
+        </div>
+        <div className="reveal load-hidden">
           <img className="img-responsive" src={firebase} alt="" />
           <span>Firebase</span>
         </div>
@@ -79,12 +93,20 @@ const Technologies = () => {
           <span>Vue</span>
         </div>
         <div className="reveal load-hidden">
+          <img className="img-responsive" src={graphql} alt="" />
+          <span>GraphQL</span>
+        </div>
+        <div className="reveal load-hidden">
           <img className="img-responsive" src={ionic} alt="" />
           <span>Ionic</span>
         </div>
         <div className="reveal load-hidden">
           <img className="img-responsive" src={css} alt="" />
           <span>CSS</span>
+        </div>
+        <div className="reveal load-hidden">
+          <img className="img-responsive" src={html} alt="" />
+          <span>HTML</span>
         </div>
       </div>
 
@@ -97,6 +119,14 @@ const Technologies = () => {
         <div className="reveal load-hidden">
           <img className="img-responsive" src={github} alt="" />
           <span>Github</span>
+        </div>
+        <div className="reveal load-hidden">
+          <img className="img-responsive" src={ubuntu} alt="" />
+          <span>Ubuntu</span>
+        </div>
+        <div className="reveal load-hidden">
+          <img className="img-responsive" src={docker} alt="" />
+          <span>Docker</span>
         </div>
         <div className="reveal load-hidden">
           <img className="img-responsive" src={capacitor} alt="" />
