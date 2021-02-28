@@ -13,7 +13,7 @@ const Hero = () => {
                 Full-Stack Software Engineer from Elkhart, IN. Currently working at Spectrum Net Designs. Self-taught with a focus on functional programming and object-oriented programming.
             </p>
             <p className="mt-3 mx-2">
-                Professional experience building RESTful web services, writing complex queries in SQL, managing statefulness, and creating user-interfaces.
+                Professional experience writing RESTful web services, crafting complex queries in SQL, managing global/local UI state, and writing testable and performant code.
             </p>
             <div className="hero-buttons text-center">
                 <Link className="btn text-white m-2 py-2 header-links project-button" to="/projects">

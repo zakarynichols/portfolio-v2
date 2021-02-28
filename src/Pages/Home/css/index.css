@@ -40,6 +40,10 @@ nav a:visited {
   color: #5ca5e1;
 }
 
+nav a:hover {
+  color: #4c7ea7;
+}
+
 nav .navWide {
   display: none;
   margin: 0 auto;

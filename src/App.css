@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
-  font-family: "Fira Sans", sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
 }
 
 body {
@@ -30,6 +40,10 @@ nav a {
 
 nav a:visited {
   color: #5ca5e1;
+}
+
+nav a:hover {
+  color: #4c7ea7;
 }
 
 nav .navWide {
@@ -182,9 +196,21 @@ span.wave {
   border-radius: 2.5px;
 }
 
+.hero-buttons .project-button:hover {
+  width: 235px;
+  background-color: #306ea1;
+  border-radius: 2.5px;
+}
+
 .hero-buttons .g-button {
   width: 235px;
   background-color: #3d4450;
+  border-radius: 2.5px;
+}
+
+.hero-buttons .g-button:hover {
+  width: 235px;
+  background-color: #353941;
   border-radius: 2.5px;
 }
 
