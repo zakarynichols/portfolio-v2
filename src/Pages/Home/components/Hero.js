@@ -7,10 +7,10 @@ const Hero = () => {
     return (
         <section className="hero container my-3 hero-max-width">
             <h1 className="header-links mx-2 text-center">
-                <strong>Hi, I'm Zak <span className="wave">👋</span></strong>
+                <strong>Zak Nichols</strong>
             </h1>
             <p className="mt-3 mx-2">
-                Full-Stack Software Engineer from Elkhart, IN. Currently working at <a href="http://www.fireflyintegrations.com/">Firefly Integrations, LLC.</a> Self-taught with a focus on functional programming and object-oriented programming.
+                Full-Stack Software Engineer from Elkhart, IN. Currently working at Spectrum Net Designs. Self-taught with a focus on functional programming and object-oriented programming.
             </p>
             <p className="mt-3 mx-2">
                 Professional experience building RESTful web services, writing complex queries in SQL, managing statefulness, and creating user-interfaces.
