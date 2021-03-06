@@ -31,9 +31,10 @@ const Technologies = () => {
       duration: 1000,
     })
     const options = {
-      distance: '20px',
+      distance: '2000px',
       origin: 'left',
-      interval: 120,
+      interval: 150,
+      duration: 600
     };
     const fadeOptions = {
       interval: 480
@@ -46,7 +47,7 @@ const Technologies = () => {
     <section className="technologies mt-3" style={{ marginBottom: '75px' }}>
       <h1 className="header-links"><strong>Technologies</strong></h1>
 
-      <h3 className="pt-3 header-links fade-reveal load-hidden">Back End</h3>
+      <h3 className="pt-3 header-links reveal load-hidden">Back End</h3>
       <div id="back-end" className="mx-3 icons">
         <div className="reveal load-hidden zoom">
           <div className="zoom">
@@ -92,7 +93,7 @@ const Technologies = () => {
         </div>
       </div>
 
-      <h3 className="pt-5 header-links fade-reveal load-hidden">Front End</h3>
+      <h3 className="pt-5 header-links reveal load-hidden">Front End</h3>
       <div id="front-end" className="mx-3 icons">
         <div className="reveal load-hidden">
           <div className="zoom">
@@ -138,7 +139,7 @@ const Technologies = () => {
         </div>
       </div>
 
-      <h3 className="pt-5 header-links fade-reveal load-hidden">Tools</h3>
+      <h3 className="pt-5 header-links reveal load-hidden">Tools</h3>
       <div className="mx-3 icons" id="dev-ops">
         <div className="reveal load-hidden">
           <div className="zoom">
