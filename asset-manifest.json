@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.0dcf0cc8.chunk.css",
-    "main.js": "/static/js/main.8a699815.chunk.js",
-    "main.js.map": "/static/js/main.8a699815.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ad035139.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ad035139.js.map",
-    "static/js/2.f73c3a7c.chunk.js": "/static/js/2.f73c3a7c.chunk.js",
-    "static/js/2.f73c3a7c.chunk.js.map": "/static/js/2.f73c3a7c.chunk.js.map",
-    "static/js/3.9de1be2c.chunk.js": "/static/js/3.9de1be2c.chunk.js",
-    "static/js/3.9de1be2c.chunk.js.map": "/static/js/3.9de1be2c.chunk.js.map",
+    "main.js": "/static/js/main.3b3e84e4.chunk.js",
+    "main.js.map": "/static/js/main.3b3e84e4.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d8c8a288.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d8c8a288.js.map",
+    "static/js/2.7b5c823c.chunk.js": "/static/js/2.7b5c823c.chunk.js",
+    "static/js/2.7b5c823c.chunk.js.map": "/static/js/2.7b5c823c.chunk.js.map",
+    "static/js/3.65677a22.chunk.js": "/static/js/3.65677a22.chunk.js",
+    "static/js/3.65677a22.chunk.js.map": "/static/js/3.65677a22.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.0dcf0cc8.chunk.css.map": "/static/css/main.0dcf0cc8.chunk.css.map",
-    "static/js/2.f73c3a7c.chunk.js.LICENSE.txt": "/static/js/2.f73c3a7c.chunk.js.LICENSE.txt",
+    "static/js/2.7b5c823c.chunk.js.LICENSE.txt": "/static/js/2.7b5c823c.chunk.js.LICENSE.txt",
     "static/media/capacitor.svg": "/static/media/capacitor.a27c08a6.svg",
     "static/media/css.svg": "/static/media/css.c0d58b03.svg",
     "static/media/docker.svg": "/static/media/docker.2ef58087.svg",
@@ -36,12 +36,13 @@
     "static/media/typescript-original.svg": "/static/media/typescript-original.8aa2c2d0.svg",
     "static/media/ubuntu.svg": "/static/media/ubuntu.102faf2d.svg",
     "static/media/vscode.svg": "/static/media/vscode.f8f6eda9.svg",
-    "static/media/vue.svg": "/static/media/vue.0b086d12.svg"
+    "static/media/vue.svg": "/static/media/vue.0b086d12.svg",
+    "static/media/webpack.svg": "/static/media/webpack.23fc1d3a.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ad035139.js",
-    "static/js/2.f73c3a7c.chunk.js",
+    "static/js/runtime-main.d8c8a288.js",
+    "static/js/2.7b5c823c.chunk.js",
     "static/css/main.0dcf0cc8.chunk.css",
-    "static/js/main.8a699815.chunk.js"
+    "static/js/main.3b3e84e4.chunk.js"
   ]
 }
